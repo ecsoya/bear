@@ -3,6 +3,7 @@ package com.github.ecsoya.bear.framework.config;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -19,10 +20,13 @@ import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.CookieRememberMeManager;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.apache.shiro.web.servlet.SimpleCookie;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.util.ObjectUtils;
 
 import com.github.ecsoya.bear.common.constant.Constants;
 import com.github.ecsoya.bear.common.utils.StringUtils;
@@ -49,6 +53,7 @@ import at.pollux.thymeleaf.shiro.dialect.ShiroDialect;
  */
 @Configuration
 public class ShiroConfig {
+	private static final Logger log = LoggerFactory.getLogger(ShiroConfig.class);
 	/**
 	 * Session超时时间，单位为毫秒（默认30分钟）
 	 */
@@ -132,6 +137,9 @@ public class ShiroConfig {
 	 */
 	@Value("${shiro.rememberMe.enabled: false}")
 	private boolean rememberMe;
+
+	@Value("${shiro.anons: []}")
+	private String[] anons;
 
 	/**
 	 * 缓存管理器 使用Ehcache实现
@@ -282,6 +290,15 @@ public class ShiroConfig {
 		filterChainDefinitionMap.put("/register", "anon,captchaValidate");
 		// 系统权限列表
 		// filterChainDefinitionMap.putAll(SpringUtils.getBean(IMenuService.class).selectPermsAll());
+		// 加载自定义匿名路径
+		if (!ObjectUtils.isEmpty(anons)) {
+			Arrays.asList(anons).forEach(path -> {
+				log.info("{}->anon", path);
+				if (!filterChainDefinitionMap.containsKey(path)) {
+					filterChainDefinitionMap.put(path, "anon");
+				}
+			});
+		}
 
 		Map<String, Filter> filters = new LinkedHashMap<String, Filter>();
 		filters.put("onlineSession", onlineSessionFilter());

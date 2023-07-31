@@ -16,5 +16,6 @@ cust:
       username: null
       password: null
 shiro:
+  anons: /aaa/**, /bbb/**, /index**
   user:
     captchaEnabled: false
