@@ -1,4 +1,4 @@
-package com.github.ecsoya.bear.web.controller.system;
+package com.github.ecsoya.bear.framework.controller.system;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

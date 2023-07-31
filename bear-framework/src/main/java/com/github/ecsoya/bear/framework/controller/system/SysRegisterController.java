@@ -1,4 +1,4 @@
-package com.github.ecsoya.bear.web.controller.system;
+package com.github.ecsoya.bear.framework.controller.system;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

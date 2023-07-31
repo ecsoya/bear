@@ -1,4 +1,4 @@
-package com.github.ecsoya.bear.web.controller.system;
+package com.github.ecsoya.bear.framework.controller.system;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

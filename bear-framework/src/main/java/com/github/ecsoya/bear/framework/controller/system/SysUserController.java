@@ -1,4 +1,4 @@
-package com.github.ecsoya.bear.web.controller.system;
+package com.github.ecsoya.bear.framework.controller.system;
 
 import java.util.List;
 import java.util.stream.Collectors;

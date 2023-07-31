@@ -73,7 +73,11 @@ public class SysPasswordService {
 		loginRecordCache.remove(loginName);
 	}
 
-	public String encryptPassword(String loginName, String password, String salt) {
+	public static String encryptPassword(String loginName, String password, String salt) {
 		return new Md5Hash(loginName + password + salt).toHex();
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(encryptPassword("admin", "123456", "111111"));
 	}
 }

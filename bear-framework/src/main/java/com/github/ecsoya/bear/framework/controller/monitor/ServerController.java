@@ -1,4 +1,4 @@
-package com.github.ecsoya.bear.web.controller.monitor;
+package com.github.ecsoya.bear.framework.controller.monitor;
 
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.stereotype.Controller;

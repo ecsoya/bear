@@ -1,4 +1,4 @@
-package com.github.ecsoya.bear.web.controller.monitor;
+package com.github.ecsoya.bear.framework.controller.tool;
 
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.stereotype.Controller;
@@ -8,18 +8,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.github.ecsoya.bear.common.core.controller.BaseController;
 
 /**
- * druid 监控
+ * build 表单构建
  * 
  * @author angryred
  */
 @Controller
-@RequestMapping("/monitor/data")
-public class DruidController extends BaseController {
-	private String prefix = "/druid";
+@RequestMapping("/tool/build")
+public class BuildController extends BaseController {
+	private String prefix = "tool/build";
 
-	@RequiresPermissions("monitor:data:view")
+	@RequiresPermissions("tool:build:view")
 	@GetMapping()
-	public String index() {
-		return redirect(prefix + "/index.html");
+	public String build() {
+		return prefix + "/build";
 	}
 }

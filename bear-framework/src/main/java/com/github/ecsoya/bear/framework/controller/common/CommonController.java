@@ -1,4 +1,4 @@
-package com.github.ecsoya.bear.web.controller.common;
+package com.github.ecsoya.bear.framework.controller.common;
 
 import java.util.ArrayList;
 import java.util.List;
