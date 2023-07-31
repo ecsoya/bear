@@ -1,0 +1,50 @@
+# Spring配置
+server:
+  servlet: 
+    context-path: ${cust.server.servlet.context-path:/} 
+  port: ${cust.server.port:80} 
+spring:
+  main:
+    allow-circular-references: true
+  profiles:
+    include:
+    - base 
+    - cust
+    active: local
+    
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    druid:
+      master:
+        url: jdbc:mysql://${cust.mysql.master.url}?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=GMT%2B8
+        username: ${cust.mysql.master.username}
+        password: ${cust.mysql.master.password}
+      slave:
+        enabled: ${cust.mysql.slave.enabled}
+        url: jdbc:mysql://${cust.mysql.slave.url}?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=GMT%2B8
+        username: ${cust.mysql.slave.username}
+        password: ${cust.mysql.slave.password}
+      initialSize: 5
+      minIdle: 10
+      maxActive: 20
+      maxWait: 60000
+      connectTimeout: 30000
+      socketTimeout: 60000
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      maxEvictableIdleTimeMillis: 900000
+      validationQuery: SELECT 1 FROM DUAL
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      webStatFilter:
+        enabled: false
+      statViewServlet:
+        enabled: false
+      filter:
+        stat:
+          enabled: false
+        wall:
+          config:
+            multi-statement-allow: true

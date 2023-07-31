@@ -1,0 +1,18 @@
+cust:
+  server:
+    servlet:
+      context-path: /admin
+    port: 8081
+  mysql:
+    master:
+      url: localhost:3306/beaver-auction
+      username: root
+      password: 123456
+    slave:
+      enabled: false
+      url: null
+      username: null
+      password: null
+shiro:
+  user:
+    captchaEnabled: false
