@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit">
-    <title>若依系统首页</title>
+    <title>系统首页</title>
     <!-- 避免IE使用兼容模式 -->
  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link th:href="@{favicon.ico}" rel="shortcut icon"/>
@@ -26,7 +26,7 @@
         </div>
         <a th:href="@{/index}">
             <li class="logo hidden-xs">
-                <span class="logo-lg">RuoYi</span>
+                <span class="logo-lg">系统管理</span>
             </li>
          </a>
         <div class="sidebar-collapse">
@@ -49,7 +49,7 @@
                 <li>
                     <a class="menuItem" th:href="@{/system/main}"><i class="fa fa-home"></i> <span class="nav-label">首页</span> </a>
                 </li>
-                <li th:each="menu : ${menus}">
+                <li th:each="menu : ${menus}" th:if="${!demoEnabled}">
                 	<a th:class="@{${!#strings.isEmpty(menu.url) && menu.url != '#'} ? ${menu.target}}" th:href="@{${#strings.isEmpty(menu.url)} ? |#| : ${menu.url}}" th:data-refresh="${menu.isRefresh == '0'}">
                 		<i class="fa fa-bar-chart-o" th:class="${menu.icon}"></i>
                     	<span class="nav-label" th:text="${menu.menuName}">一级菜单</span>
@@ -72,7 +72,14 @@
 					</ul>
                 </li>
                 <li th:if="${demoEnabled}">
-                    <a href="#"><i class="fa fa-desktop"></i><span class="nav-label">实例演示</span><span class="fa arrow"></span></a>
+                    <a href="#code"><i class="fa fa-desktop"></i> <span class="nav-label">代码生成</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                    	<li>
+							<a class="menuItem" th:href="@{/tool/gen}" data-refresh="false" data-index="18">代码生成</a>
+							
+						</li>
+                    </ul>
+                    <a href="#"><i class="fa fa-desktop"></i> <span class="nav-label">实例演示</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
                         <li> <a>表单<span class="fa arrow"></span></a>
                             <ul class="nav nav-third-level">
@@ -251,7 +258,7 @@
         </div>
 
         <div th:if="${footer}" class="footer">
-            <div class="pull-right">© [[${copyrightYear}]] RuoYi Copyright </div>
+            <div class="pull-right">© [[${copyrightYear}]] Copyright </div>
         </div>
     </div>
     <!--右侧部分结束-->

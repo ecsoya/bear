@@ -1,11 +1,13 @@
+bear:
+  demoEnabled: true
 cust:
   server:
     servlet:
       context-path: /admin
-    port: 8081
+    port: 8051
   mysql:
     master:
-      url: localhost:3306/beaver-auction
+      url: localhost:3306/bear-auction
       username: root
       password: 123456
     slave:

@@ -5,7 +5,7 @@
 	<parent>
 		<artifactId>bear-parent</artifactId>
 		<groupId>com.github.ecsoya</groupId>
-		<version>1.0.1</version>
+		<version>1.0.2</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 	<packaging>jar</packaging>
@@ -40,12 +40,6 @@
 		<dependency>
 			<groupId>com.github.ecsoya</groupId>
 			<artifactId>bear-framework</artifactId>
-		</dependency>
-
-		<!-- 定时任务 -->
-		<dependency>
-			<groupId>com.github.ecsoya</groupId>
-			<artifactId>bear-quartz</artifactId>
 		</dependency>
 
 		<!-- 代码生成 -->
