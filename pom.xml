@@ -3,14 +3,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.ecsoya</groupId>
-	<artifactId>bear</artifactId>
-	<version>1.0.0</version>
+	<artifactId>bear-parent</artifactId>
+	<version>1.0.1</version>
 	<packaging>pom</packaging>
 	<name>bear</name>
 
 
 	<properties>
-		<bear.version>1.0.0</bear.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
@@ -141,42 +140,41 @@
 			<dependency>
 				<groupId>com.github.ecsoya</groupId>
 				<artifactId>bear-quartz</artifactId>
-				<version>${bear.version}</version>
+				<version>${project.version}</version>
 			</dependency>
 
 			<!-- 代码生成 -->
 			<dependency>
 				<groupId>com.github.ecsoya</groupId>
 				<artifactId>bear-generator</artifactId>
-				<version>${bear.version}</version>
+				<version>${project.version}</version>
 			</dependency>
 
 			<!-- 核心模块 -->
 			<dependency>
 				<groupId>com.github.ecsoya</groupId>
 				<artifactId>bear-framework</artifactId>
-				<version>${bear.version}</version>
+				<version>${project.version}</version>
 			</dependency>
 
 			<!-- 系统模块 -->
 			<dependency>
 				<groupId>com.github.ecsoya</groupId>
 				<artifactId>bear-system</artifactId>
-				<version>${bear.version}</version>
+				<version>${project.version}</version>
 			</dependency>
 
 			<!-- 通用工具 -->
 			<dependency>
 				<groupId>com.github.ecsoya</groupId>
 				<artifactId>bear-common</artifactId>
-				<version>${bear.version}</version>
+				<version>${project.version}</version>
 			</dependency>
 
 		</dependencies>
 	</dependencyManagement>
 
 	<modules>
-		<module>bear-admin</module>
 		<module>bear-framework</module>
 		<module>bear-system</module>
 		<module>bear-quartz</module>
