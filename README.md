@@ -24,4 +24,10 @@ Step 2. Add the dependency
 ```
 
 # bear
-Springboot developing framework from RuoYi
+Springboot developing framework from [RuoYi](https://ruoyi.vip/)
+
+## New Features:
+1. Move admin resources and controllers to bear-framework.
+2. Refactor index page to admin manager and generator (include demos).
+3. Add ControllerAdapter for custom index and login page.
+4. Add redis support for cache and session, the default is ehcache.
