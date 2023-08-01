@@ -20,6 +20,7 @@ import com.github.ecsoya.bear.common.core.domain.AjaxResult;
 import com.github.ecsoya.bear.common.core.text.Convert;
 import com.github.ecsoya.bear.common.utils.ServletUtils;
 import com.github.ecsoya.bear.common.utils.StringUtils;
+import com.github.ecsoya.bear.framework.controller.adapter.ControllerAdapter;
 import com.github.ecsoya.bear.framework.web.service.ConfigService;
 
 /**
@@ -38,8 +39,14 @@ public class SysLoginController extends BaseController {
 	@Autowired
 	private ConfigService configService;
 
+	@Autowired(required = false)
+	private ControllerAdapter controllerAdapter;
+
 	@GetMapping("/login")
 	public String login(HttpServletRequest request, HttpServletResponse response, ModelMap mmap) {
+		if (controllerAdapter != null && controllerAdapter.hasPage("main")) {
+			return controllerAdapter.getPage(getRequest(), "main", mmap);
+		}
 		// 如果是Ajax请求，返回Json字符串。
 		if (ServletUtils.isAjaxRequest(request)) {
 			return ServletUtils.renderString(response, "{\"code\":\"1\",\"msg\":\"未登录或登录超时。请重新登录\"}");

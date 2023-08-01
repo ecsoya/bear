@@ -25,6 +25,7 @@ import com.github.ecsoya.bear.common.utils.CookieUtils;
 import com.github.ecsoya.bear.common.utils.DateUtils;
 import com.github.ecsoya.bear.common.utils.ServletUtils;
 import com.github.ecsoya.bear.common.utils.StringUtils;
+import com.github.ecsoya.bear.framework.controller.adapter.ControllerAdapter;
 import com.github.ecsoya.bear.framework.shiro.service.SysPasswordService;
 import com.github.ecsoya.bear.system.service.ISysConfigService;
 import com.github.ecsoya.bear.system.service.ISysMenuService;
@@ -45,9 +46,15 @@ public class SysIndexController extends BaseController {
 	@Autowired
 	private SysPasswordService passwordService;
 
+	@Autowired(required = false)
+	private ControllerAdapter controllerAdapter;
+
 	// 系统首页
 	@GetMapping("/index")
 	public String index(ModelMap mmap) {
+		if (controllerAdapter != null && controllerAdapter.hasPage("index")) {
+			return controllerAdapter.getPage(getRequest(), "index", mmap);
+		}
 		// 取身份信息
 		SysUser user = getSysUser();
 		// 根据用户id取出菜单
@@ -88,6 +95,9 @@ public class SysIndexController extends BaseController {
 	// 锁定屏幕
 	@GetMapping("/lockscreen")
 	public String lockscreen(ModelMap mmap) {
+		if (controllerAdapter != null && controllerAdapter.hasPage("lockscreen")) {
+			return controllerAdapter.getPage(getRequest(), "lockscreen", mmap);
+		}
 		mmap.put("user", getSysUser());
 		ServletUtils.getSession().setAttribute(ShiroConstants.LOCK_SCREEN, true);
 		return "lock";
@@ -110,7 +120,10 @@ public class SysIndexController extends BaseController {
 
 	// 切换主题
 	@GetMapping("/system/switchSkin")
-	public String switchSkin() {
+	public String switchSkin(ModelMap mmap) {
+		if (controllerAdapter != null && controllerAdapter.hasPage("switchSkin")) {
+			return controllerAdapter.getPage(getRequest(), "switchSkin", mmap);
+		}
 		return "skin";
 	}
 
@@ -123,6 +136,9 @@ public class SysIndexController extends BaseController {
 	// 系统介绍
 	@GetMapping("/system/main")
 	public String main(ModelMap mmap) {
+		if (controllerAdapter != null && controllerAdapter.hasPage("main")) {
+			return controllerAdapter.getPage(getRequest(), "main", mmap);
+		}
 		mmap.put("version", BearConfig.getVersion());
 		return "main";
 	}
