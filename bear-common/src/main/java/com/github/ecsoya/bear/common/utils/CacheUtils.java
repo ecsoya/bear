@@ -176,6 +176,9 @@ public class CacheUtils {
 	 * @return 缓存组
 	 */
 	public static String[] getCacheNames() {
-		return ((EhCacheManager) cacheManager).getCacheManager().getCacheNames();
+		if (cacheManager instanceof EhCacheManager) {
+			return ((EhCacheManager) cacheManager).getCacheManager().getCacheNames();
+		}
+		return new String[0];
 	}
 }

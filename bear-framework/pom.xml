@@ -5,7 +5,7 @@
     <parent>
         <artifactId>bear-parent</artifactId>
         <groupId>com.github.ecsoya</groupId>
-        <version>v1.0.4</version>
+        <version>v1.0.5</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -76,6 +76,11 @@
             <groupId>com.github.ecsoya</groupId>
             <artifactId>bear-system</artifactId>
         </dependency>
+        
+        <dependency>
+			<groupId>org.crazycake</groupId>
+			<artifactId>shiro-redis</artifactId>
+		</dependency>
 
     </dependencies>
 

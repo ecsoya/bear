@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.ecsoya</groupId>
 	<artifactId>bear-parent</artifactId>
-	<version>v1.0.4</version>
+	<version>v1.0.5</version>
 	<packaging>pom</packaging>
 	<name>bear</name>
 
@@ -26,6 +26,7 @@
 		<poi.version>5.2.3</poi.version>
 		<velocity.version>2.3</velocity.version>
 		<mysql.version>8.0.32</mysql.version>
+		<shiro.redis.version>3.3.1</shiro.redis.version>
 	</properties>
 
 	<!-- 依赖声明 -->
@@ -170,7 +171,22 @@
 				<artifactId>bear-common</artifactId>
 				<version>${project.version}</version>
 			</dependency>
-
+			<!-- Shiro使用Redis缓存框架 -->
+			<dependency>
+				<groupId>org.crazycake</groupId>
+				<artifactId>shiro-redis</artifactId>
+				<version>${shiro.redis.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-checkstyle-plugin</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-javadoc-plugin</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 

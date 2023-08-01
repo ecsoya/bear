@@ -2,6 +2,7 @@ package com.github.ecsoya.bear.framework.manager;
 
 import javax.annotation.PreDestroy;
 
+import org.apache.shiro.cache.CacheManager;
 import org.apache.shiro.cache.ehcache.EhCacheManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,8 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.github.ecsoya.bear.framework.shiro.web.session.SpringSessionValidationScheduler;
-
-import net.sf.ehcache.CacheManager;
 
 /**
  * 确保应用退出时能关闭后台线程
@@ -25,7 +24,7 @@ public class ShutdownManager {
 	private SpringSessionValidationScheduler springSessionValidationScheduler;
 
 	@Autowired(required = false)
-	private EhCacheManager ehCacheManager;
+	private CacheManager cacheManager;
 
 	@PreDestroy
 	public void destroy() {
@@ -63,9 +62,8 @@ public class ShutdownManager {
 	private void shutdownEhCacheManager() {
 		try {
 			logger.info("====关闭缓存====");
-			if (ehCacheManager != null) {
-				CacheManager cacheManager = ehCacheManager.getCacheManager();
-				cacheManager.shutdown();
+			if (cacheManager instanceof EhCacheManager) {
+				((EhCacheManager) cacheManager).getCacheManager().shutdown();
 			}
 		} catch (Exception e) {
 			logger.error(e.getMessage(), e);

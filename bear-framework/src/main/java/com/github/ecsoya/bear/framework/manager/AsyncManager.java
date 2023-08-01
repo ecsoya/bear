@@ -4,6 +4,8 @@ import java.util.TimerTask;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
+import org.springframework.beans.BeansException;
+
 import com.github.ecsoya.bear.common.utils.Threads;
 import com.github.ecsoya.bear.common.utils.spring.SpringUtils;
 
@@ -17,11 +19,6 @@ public class AsyncManager {
 	 * 操作延迟10毫秒
 	 */
 	private final int OPERATE_DELAY_TIME = 10;
-
-	/**
-	 * 异步操作任务调度线程池
-	 */
-	private ScheduledExecutorService executor = SpringUtils.getBean("scheduledExecutorService");
 
 	/**
 	 * 单例模式
@@ -41,13 +38,47 @@ public class AsyncManager {
 	 * @param task 任务
 	 */
 	public void execute(TimerTask task) {
-		executor.schedule(task, OPERATE_DELAY_TIME, TimeUnit.MILLISECONDS);
+		ScheduledExecutorService executor = getExecutor();
+		if (executor != null) {
+			executor.schedule(task, OPERATE_DELAY_TIME, TimeUnit.MILLISECONDS);
+		} else {
+			task.run();
+		}
+	}
+
+	public void execute(Runnable task) {
+		ScheduledExecutorService executor = getExecutor();
+		if (executor != null) {
+			executor.schedule(task, OPERATE_DELAY_TIME, TimeUnit.MILLISECONDS);
+		} else {
+			task.run();
+		}
+	}
+
+	public void schedule(Runnable task, long delay, TimeUnit timeUnit) {
+		ScheduledExecutorService executor = getExecutor();
+		if (executor != null) {
+			executor.schedule(task, delay, timeUnit);
+		} else {
+			task.run();
+		}
+	}
+
+	private ScheduledExecutorService getExecutor() {
+		try {
+			return SpringUtils.getBean("scheduledExecutorService");
+		} catch (BeansException e) {
+			return null;
+		}
 	}
 
 	/**
 	 * 停止任务线程池
 	 */
 	public void shutdown() {
-		Threads.shutdownAndAwaitTermination(executor);
+		ScheduledExecutorService executor = getExecutor();
+		if (executor != null) {
+			Threads.shutdownAndAwaitTermination(executor);
+		}
 	}
 }

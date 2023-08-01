@@ -1,10 +1,13 @@
 bear:
-  demoEnabled: true
+  demoEnabled: false
 cust:
   server:
     servlet:
       context-path: /admin
     port: 8051
+  redis: 
+    enabled: true
+    host: localhost
   mysql:
     master:
       url: localhost:3306/bear-auction
