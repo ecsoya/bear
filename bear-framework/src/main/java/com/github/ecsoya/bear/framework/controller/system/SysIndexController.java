@@ -53,7 +53,10 @@ public class SysIndexController extends BaseController {
 	@GetMapping("/index")
 	public String index(ModelMap mmap) {
 		if (controllerAdapter != null && controllerAdapter.hasPage("index")) {
-			return controllerAdapter.getPage(getRequest(), "index", mmap);
+			String page = controllerAdapter.getPage(getRequest(), "index", mmap);
+			if (StringUtils.isNotEmpty(page)) {
+				return page;
+			}
 		}
 		// 取身份信息
 		SysUser user = getSysUser();
@@ -96,7 +99,10 @@ public class SysIndexController extends BaseController {
 	@GetMapping("/lockscreen")
 	public String lockscreen(ModelMap mmap) {
 		if (controllerAdapter != null && controllerAdapter.hasPage("lockscreen")) {
-			return controllerAdapter.getPage(getRequest(), "lockscreen", mmap);
+			String page = controllerAdapter.getPage(getRequest(), "lockscreen", mmap);
+			if (StringUtils.isNotEmpty(page)) {
+				return page;
+			}
 		}
 		mmap.put("user", getSysUser());
 		ServletUtils.getSession().setAttribute(ShiroConstants.LOCK_SCREEN, true);
@@ -122,7 +128,10 @@ public class SysIndexController extends BaseController {
 	@GetMapping("/system/switchSkin")
 	public String switchSkin(ModelMap mmap) {
 		if (controllerAdapter != null && controllerAdapter.hasPage("switchSkin")) {
-			return controllerAdapter.getPage(getRequest(), "switchSkin", mmap);
+			String page = controllerAdapter.getPage(getRequest(), "switchSkin", mmap);
+			if (StringUtils.isNotEmpty(page)) {
+				return page;
+			}
 		}
 		return "skin";
 	}
@@ -137,7 +146,10 @@ public class SysIndexController extends BaseController {
 	@GetMapping("/system/main")
 	public String main(ModelMap mmap) {
 		if (controllerAdapter != null && controllerAdapter.hasPage("main")) {
-			return controllerAdapter.getPage(getRequest(), "main", mmap);
+			String page = controllerAdapter.getPage(getRequest(), "main", mmap);
+			if (StringUtils.isNotEmpty(page)) {
+				return page;
+			}
 		}
 		mmap.put("version", BearConfig.getVersion());
 		return "main";

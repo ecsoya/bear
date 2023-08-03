@@ -45,7 +45,10 @@ public class SysLoginController extends BaseController {
 	@GetMapping("/login")
 	public String login(HttpServletRequest request, HttpServletResponse response, ModelMap mmap) {
 		if (controllerAdapter != null && controllerAdapter.hasPage("main")) {
-			return controllerAdapter.getPage(getRequest(), "main", mmap);
+			String page = controllerAdapter.getPage(getRequest(), "main", mmap);
+			if (StringUtils.isNotEmpty(page)) {
+				return page;
+			}
 		}
 		// 如果是Ajax请求，返回Json字符串。
 		if (ServletUtils.isAjaxRequest(request)) {
