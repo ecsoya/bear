@@ -1,0 +1,277 @@
+.box-nav-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+
+.box-nav-wrap {
+  position: relative;
+  z-index: 31;
+  background-color: $white-color;
+  max-width: 330px;
+  height: 100%;
+}
+
+.box-nav-btn {
+  text-transform: uppercase;
+  font-family: $title-font;
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  background-color: transparent;
+  background-color: #f7f3f1;
+  width: 100%;
+  display: block;
+  text-align: left;
+  padding: 17px 30px;
+  color: $title-color;
+  margin-bottom: 25px;
+
+  &:after {
+    content: '\f107';
+    font-family: $icon-font;
+    float: right;
+    display: none;
+  }
+
+  i {
+    margin-right: 15px;
+  }
+}
+
+.vs-box-nav {  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  >ul {
+    >li {
+      margin: 20px 0;
+      position: relative;
+
+      >a {
+        font-size: 16px;
+        padding: 0 30px;
+      }
+    }
+  }
+  
+
+  li.menu-item-has-children {
+    >a {
+      &:after {
+        content: '\f107';
+        font-family: $icon-font;
+        float: right;
+        top: 1px;
+        position: relative;
+        transition: all 0.2s ease;
+      }
+
+      &.active,
+      &:hover:not(:focus) {
+        &:after {
+          color: $theme-color;
+          transform: rotate(-90deg);
+        }
+      }
+    }
+
+    >ul {
+      position: absolute;
+      left: 100%;
+      width: max-content;
+      background-color: $white-color;
+      top: 0;
+      opacity: 0;
+      visibility: hidden;
+      margin-left: 20px;
+      transition: all 0.2s ease;
+    }
+
+    .mega-menu-wrap {
+      top: -20px;
+      max-width: calc(1176px - 330px);
+    }
+
+    .sub-menu {
+      top: -14px;
+      min-width: 230px;
+      padding: 15px 20px 13px 20px;
+
+      li {
+        margin-bottom: 7px;
+      }
+
+      ul.sub-menu {
+        top: 0;
+      }
+    }
+
+    
+
+    &:hover {
+      >ul {
+        opacity: 1;
+        visibility: visible;
+        margin-left: 0;
+      }
+    }
+  }
+
+
+
+  a:not(.vs-btn) {
+    color: $title-color;
+    font-weight: 600;
+    position: relative;
+    display: block;
+
+    i {
+      font-size: 1.4em;
+      vertical-align: middle;
+      width: 39px;
+      display: inline-block;
+      color: #3d6666;
+      transition: inherit;
+    }
+
+    &.active,
+    &:hover:not(:focus) {
+      &,
+      i {
+        color: $theme-color;
+      }
+    }
+  }
+
+}
+
+
+.box-nav-popup {
+  padding: 20px 30px 0px 30px;
+  box-shadow: 0 0 35px -5px rgba(0,0,0,0.1);
+
+  .widget {
+    margin-bottom: 20px;
+  }
+  
+  .widget-title {
+    position: relative;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .vs-box-nav {
+    li {
+      margin: 0 0 5px 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a:not(.vs-btn) {
+      padding: 0;
+      border: none;
+      color: $body-color;
+      font-size: 14px;
+      font-weight: 400;
+      background-color: transparent;
+
+      &:hover {
+        color: $theme-color;
+      }
+    }
+  }
+}
+
+
+@include lg {
+  .box-nav-wrap {
+    max-width: 100%;
+    height: auto;
+
+    >.vs-box-nav {
+      display: none;
+    }
+  }
+
+  .box-nav-btn {
+    &:after {
+      display: block;
+    }
+  }
+
+  .box-nav-btn {
+    margin-bottom: 0;
+  }
+
+  .box-nav-container {
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .box-nav-btn {
+    padding: 17px 31px;
+  }
+
+  .vs-box-nav li.menu-item-has-children>ul {
+    position: relative;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+    margin-left: 0;
+    display: none;
+    transition: 0s;
+  }
+
+  .vs-box-nav li.menu-item-has-children .mega-menu-wrap {
+    top: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+
+
+  .box-nav-popup {
+    padding: 5px 0 0 0;
+    box-shadow: none;
+  }
+
+  .box-nav-wrap>.vs-box-nav>ul>li {
+    border-bottom: 1px solid #dddee6;
+    margin: 0;
+    padding: 0 30px ;
+
+    >a {
+      padding: 10px 0;
+    }
+  }
+
+  .box-nav-wrap>.vs-box-nav>ul>li:last-child {
+    border-bottom: none;
+  }
+
+  .vs-box-nav li.menu-item-has-children .sub-menu {
+    width: 100%;
+    top: 0;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    background-color: $secondary-color;
+
+    .sub-menu {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
+
+  
+
+}

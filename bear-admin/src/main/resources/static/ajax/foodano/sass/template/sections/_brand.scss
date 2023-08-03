@@ -1,0 +1,15 @@
+.brand-style1 {
+  border-right: 1px dashed #cbcbcb;
+  text-align: center;
+
+  &:last-child {
+    border: none;
+  }
+}
+
+
+@include md {
+  .brand-style1 {
+    border-right: none;
+  }
+}

@@ -1,0 +1,47 @@
+.vs-cat-card {
+  padding-bottom: 20px;
+  position: relative;
+  
+  .cat-img {
+    overflow: hidden;
+    img {
+      position: relative;
+      transform: scale(1);
+      transition: all ease 0.4s;
+    }
+  }
+
+  .cat-content {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    text-align: center;
+    background-color: $theme-color;
+    padding: 18px 10px;
+    transition: all ease 0.4s;
+  }
+
+  .cat-title {
+    margin: 0;
+    font-weight: 600;
+    color: $white-color;
+    
+    a {
+      color: inherit;
+    }
+  }
+
+
+  &:hover {
+    .cat-content {
+      background-color: $body-color;
+    }
+    
+    .cat-img {
+      img {
+        transform: scale(1.3);
+      }
+    }
+  }
+}

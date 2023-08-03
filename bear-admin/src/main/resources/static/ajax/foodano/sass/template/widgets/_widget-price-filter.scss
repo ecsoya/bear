@@ -1,0 +1,141 @@
+.price_slider_wrapper {
+  .price_slider_amount {
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+
+    .price_label {
+      order: 1;
+      margin-bottom: 10px;
+    }
+
+    button {
+      order: 2;
+      width: 94px;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 50px;
+      min-width: auto;
+      font-weight: 700;
+      font-size: 14px;
+      color: $white-color;
+      border: none;
+      padding: 0;
+      text-transform: capitalize;
+      background-color: $theme-color;
+
+
+      &:hover {
+        background-color: $title-color;
+        color: $white-color;
+      }
+    }
+  }
+
+  
+
+
+}
+
+
+.price_slider_wrapper {
+  margin-top: 25px;
+
+  .price_label {
+    font-weight: 700;
+
+    span {
+      font-weight: 500;
+
+      &:first-child {
+        margin-left: 5px;
+      }
+    }
+  }
+
+
+
+  .price-area {
+    float: left;
+    padding: 7px 0;
+
+    span {
+      display: inline-block;
+      color: $title-color;
+    }
+  }
+
+
+  input {
+    width: 100px;
+    display: inline-block;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 700;
+    color: $body-color;
+  }
+
+
+  .ui-slider {
+    height: 6px;
+    position: relative;
+    width: 100%;
+    background-color: $smoke-color;
+    border: none;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+
+  .ui-slider-range {
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    z-index: 1;
+    display: block;
+    background-color: $theme-color;
+  }
+
+  .ui-slider-handle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-top: -2px;
+    text-align: center;
+    line-height: 10.5px;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    margin-top: -7px;
+    z-index: 2;
+    background-color: $theme-color;
+    box-shadow: 1.5px 2.598px 10px 0px rgba(0, 0, 0, 0.15);
+    transform: translateX(0);
+
+    &:focus {
+      outline: none;
+      box-shadow: 1.5px 2.598px 10px 0px rgba(0, 0, 0, 0.15);
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      background-color: #fff;
+      top: 50%;
+      left: 50%;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &:last-child {
+      transform: translateX(-20px);
+    }
+  }
+}

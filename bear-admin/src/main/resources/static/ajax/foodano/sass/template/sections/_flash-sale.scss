@@ -1,0 +1,164 @@
+.vs-flash-sale {
+  border: 1px solid $secondary-color;
+  background-color: $secondary-color;
+  margin-bottom: 30px;
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: $theme-color;
+    }
+  }
+  
+  .flash-img {
+    max-width: 170px;
+    background-color: $white-color;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .flash-content {
+    padding-left: 30px;
+    padding-right: 20px;
+  }
+
+  .price {
+    font-size: 700;
+    font-family: $title-font;
+    color: $body-color2;
+    font-weight: 700;
+  }
+
+  .star-rating {
+    margin-top: 5px;
+  }  
+
+  &:hover {
+    .flash-counter {
+      background-color: $theme-color;
+    }
+  }
+}
+
+.flash-counter,
+.deal-counter {
+
+  .message {
+    display: none;
+  }
+
+  >*:not(.message) {
+    position: relative;
+
+    &:before {
+      content: ':';
+      position: relative;
+    }
+
+    &:first-child {
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  &.expired {
+    text-align: center;
+
+    >*:not(.message) {
+      display: none;
+    }
+  }
+}
+
+
+.flash-counter {
+  background-color: $body-color;
+  color: $white-color;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  font-family: $title-font;
+  padding: 12px 20px;
+  transition: all ease 0.4s;
+
+  >*:not(.message) {
+    &:before {
+      margin: 0 20px;
+    }
+  }
+}
+
+
+
+.deal-counter {
+  font-size: 22px;
+  font-family: $title-font;
+  color: $title-color;
+  font-weight: 600;
+
+  >*:not(.message) {
+    &:before {
+      margin-right: 20px;
+      margin-left: 13px;
+    }
+  }
+
+}
+
+
+
+
+
+@include lg {
+  .vs-flash-sale {
+    .flash-img {
+      max-width: 120px;
+    }
+
+    .flash-content {
+      padding-left: 20px;
+    }
+
+  }
+
+  .flash-counter {
+    padding: 6px 10px;
+  }
+
+  .flash-counter>*:not(.message):before {
+    margin: 0 5px;
+  }
+}
+
+
+@include sm {
+  .vs-flash-sale {
+    text-align: center;
+    
+    .flash-img {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .flash-content {
+      padding: 15px 10px;
+      padding-bottom: 17px;
+    }
+  }
+
+  
+
+  .deal-counter {
+    font-size: 16px;
+
+    >*:not(.message):before {
+      margin-right: 10px;
+      margin-left: 3px;
+    }
+  }
+}

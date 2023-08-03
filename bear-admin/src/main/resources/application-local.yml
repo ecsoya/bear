@@ -1,5 +1,5 @@
 bear:
-  demoEnabled: false
+  demoEnabled: true
 cust:
   server:
     servlet:
@@ -19,6 +19,6 @@ cust:
       username: null
       password: null
 shiro:
-  anons: /aaa/**, /bbb/**, /index**
+  anons: /auction/**, /foodano/*
   user:
     captchaEnabled: false

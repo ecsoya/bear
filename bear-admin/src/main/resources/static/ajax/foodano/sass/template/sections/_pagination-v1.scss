@@ -1,0 +1,60 @@
+
+.pagination-layout1 {
+  text-align: center;
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      margin: 0 3px;
+      list-style-type: none;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      span,
+      a {
+        display: inline-block;
+        background-color: $secondary-color;
+        height: 42px;
+        min-width: 42px;
+        width: auto;
+        padding: 0 16px;
+        text-transform: uppercase;
+        font-weight: 600;
+        line-height: 42px;
+        color: $title-color;
+
+
+        &.active,
+        &:hover {
+          color: $white-color;
+          background-color: $theme-color;
+          border-color: transparent;
+        }
+      }
+    }
+  }
+
+}
+
+
+@include sm {
+  .pagination-layout1 {
+    ul {
+      li {
+        span,
+        a {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}

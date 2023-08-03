@@ -1,0 +1,141 @@
+.breadcumb-menu-style1 {
+  max-width: 100%;
+  width: fit-content;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  line-height: 0;
+  margin-top: 7px;
+
+  li {
+    display: inline-block;
+    margin: 0 6px;
+    list-style: none;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &:after {
+      content: '/';
+      position: relative;
+      right: -7px;
+      float: right;
+    }
+  }
+
+  li,
+  a,
+  span {
+    white-space: normal;
+    word-break: break-word;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-family: $title-font;
+    color: $body-color;
+    font-weight: 600;
+    line-height: 1;
+    font-size: 16px;
+    
+    i {
+      margin-right: 5px;
+    }
+  }
+
+}
+
+.breadcumb-title {
+  font-size: 80px;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 3px;
+  margin-top: -0.15em;
+  word-break: break-word;
+}
+
+
+
+@include ml {
+  .breadcumb-layout1 {
+    &.pt-200.pb-200 {
+      padding-top: 150px;
+      padding-bottom: 150px;
+    }
+
+    &.bg-fluid {
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+}
+
+
+@include lg {
+  .breadcumb-title {
+    font-size: 68px;
+  }
+}
+
+@include md {
+  .breadcumb-layout1 {
+    &.pt-200.pb-200 {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+  }
+
+  .breadcumb-menu-style1 {
+    li,
+    a,
+    span {
+      font-size: 16px;
+    }
+  }
+
+  .breadcumb-title {
+    font-size: 52px;
+  }
+}
+
+@include sm {
+  .breadcumb-layout1 {
+    &.pt-200.pb-200 {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+  }
+
+  .breadcumb-menu-style1 {
+    li,
+    a,
+    span {
+      font-size: 14px;
+    }
+  } 
+
+  .breadcumb-title {
+    font-size: 42px;
+  }
+}
+
+@include xs {
+  .breadcumb-layout1 {
+    &.pt-200.pb-200 {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  }
+
+  .breadcumb-title {
+    font-size: 38px;
+    margin-bottom: 10px;
+  }
+}

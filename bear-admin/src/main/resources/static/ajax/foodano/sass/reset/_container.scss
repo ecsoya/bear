@@ -1,0 +1,78 @@
+@media only screen and (min-width: 1300px) {
+
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container {
+    max-width: 1200px;
+  }
+}
+
+
+@media only screen and (max-width: 1600px) {
+  .container-fluid.px-0 {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+
+    .row:not(.gx-70) {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+  }
+}
+
+
+.vs-container {
+  width: 100%;
+  padding-left: var(--bs-gutter-x, .75rem);
+  padding-right: var(--bs-gutter-x, .75rem);
+  margin-left: auto;
+}
+
+@include hd-device {
+  .vs-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+@media (min-width: 1600px) {
+  .vs-container {
+    max-width: 1540px;
+    padding-left: 0;
+    padding-right: 0;
+    overflow: hidden;
+  }
+
+  .vs-container_style2 {
+    max-width: 1354px;
+  }
+}
+
+@media (max-width: $hd) and (min-width: $xl) {
+  .vs-container_style3 {
+    max-width: 1569px;
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: -210px;
+
+    .row {
+      margin-left: 0;
+
+      >[class*=col-] {
+        &:first-child {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}
+
+
+@include xl {
+  .vs-container_style3 {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,680 @@
+﻿<!doctype html>
+<html class="no-js" lang="zxx" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Foodano - Organic Food Store HTML Template - FAQ Page</title>
+    <meta name="author" content="Vecuro">
+    <meta name="description" content="Foodano - Organic Food Store HTML Template">
+    <meta name="keywords" content="Foodano - Organic Food Store HTML Template" />
+    <meta name="robots" content="INDEX,FOLLOW">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--==============================
+	   Google Web Fonts
+	============================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@200;300;400;500;600;700&family=Amatic+SC:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Favicons - Place favicon.ico in the root directory -->
+    <link rel="apple-touch-icon" sizes="57x57" th:href="@{/ajax/foodano/img/favicons/apple-icon-57x57.png}">
+    <link rel="apple-touch-icon" sizes="60x60" th:href="@{/ajax/foodano/img/favicons/apple-icon-60x60.png}">
+    <link rel="apple-touch-icon" sizes="72x72" th:href="@{/ajax/foodano/img/favicons/apple-icon-72x72.png}">
+    <link rel="apple-touch-icon" sizes="76x76" th:href="@{/ajax/foodano/img/favicons/apple-icon-76x76.png}">
+    <link rel="apple-touch-icon" sizes="114x114" th:href="@{/ajax/foodano/img/favicons/apple-icon-114x114.png}">
+    <link rel="apple-touch-icon" sizes="120x120" th:href="@{/ajax/foodano/img/favicons/apple-icon-120x120.png}">
+    <link rel="apple-touch-icon" sizes="144x144" th:href="@{/ajax/foodano/img/favicons/apple-icon-144x144.png}">
+    <link rel="apple-touch-icon" sizes="152x152" th:href="@{/ajax/foodano/img/favicons/apple-icon-152x152.png}">
+    <link rel="apple-touch-icon" sizes="180x180" th:href="@{/ajax/foodano/img/favicons/apple-icon-180x180.png}">
+    <link rel="icon" type="image/png" sizes="192x192" th:href="@{/ajax/foodano/img/favicons/android-icon-192x192.png}">
+    <link rel="icon" type="image/png" sizes="32x32" th:href="@{/ajax/foodano/img/favicons/favicon-32x32.png}">
+    <link rel="icon" type="image/png" sizes="96x96" th:href="@{/ajax/foodano/img/favicons/favicon-96x96.png}">
+    <link rel="icon" type="image/png" sizes="16x16" th:href="@{/ajax/foodano/img/favicons/favicon-16x16.png}">
+    <link rel="manifest" th:href="@{/ajax/foodano/img/favicons/manifest.json}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png}">
+    <meta name="theme-color" content="#ffffff">
+
+    <!--==============================
+	    All CSS File
+	============================== -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" th:href="@{/ajax/foodano/css/bootstrap.min.css}">
+    <!-- <link rel="stylesheet" th:href="@{/ajax/foodano/css/bootstrap.rtl.min.css}"> -->
+    <!-- <link rel="stylesheet" th:href="@{/ajax/foodano/css/app.min.css}"> -->
+    <!-- Fontawesome Icon -->
+    <link rel="stylesheet" th:href="@{/ajax/foodano/css/fontawesome.min.css}">
+    <!-- Flaticon -->
+    <link rel="stylesheet" th:href="@{/ajax/foodano/css/flaticon.min.css}">
+    <!-- Layerslider -->
+    <link rel="stylesheet" th:href="@{/ajax/foodano/css/layerslider.min.css}">
+    <!-- Date Picker -->
+    <link rel="stylesheet" th:href="@{/ajax/foodano/css/jquery.datetimepicker.min.css}">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" th:href="@{/ajax/foodano/css/magnific-popup.min.css}">
+    <!-- Slick Slider -->
+    <link rel="stylesheet" th:href="@{/ajax/foodano/css/slick.min.css}">
+    <!-- Animation CSS -->
+    <link rel="stylesheet" th:href="@{/ajax/foodano/css/animate.min.css}">
+    <!-- Theme Custom CSS -->
+    <link rel="stylesheet" th:href="@{/ajax/foodano/css/style.css}">
+
+</head>
+
+<body class=" ">
+
+
+    <!--[if lte IE 9]>
+    	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+
+
+    <!--********************************
+   		Code Start From Here 
+	******************************** -->
+
+    <!--==============================
+     Preloader
+  ==============================-->
+    <div class="preloader  ">
+        <button class="vs-btn preloaderCls">Cancel Preloader </button>
+        <div class="preloader-inner">
+            <div class="loader-logo">
+                <img th:src="@{/ajax/foodano/img/logo.svg}" alt="Foodano">
+            </div>
+            <div class="loader-wrap pt-4">
+                <span class="loader"></span>
+            </div>
+        </div>
+    </div>
+    <!--==============================
+        Header Top
+    ==============================-->
+    <div class="header-top-wrapper bg-black pb-2 pt-10 z-index-step1 d-none d-lg-block">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-sm-6 col-md-4 col-lg-4 d-none d-sm-block">
+                    <div class="head-top-links text-body2">
+                        <span class="icon-btn"><i class="fal fa-pennant"></i></span>
+                        <ul>
+                            <li>
+                                <!-- Dropdown -->
+                                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Language
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink1">
+                                    <li><a href="#">German</a></li>
+                                    <li><a href="#">French</a></li>
+                                    <li><a href="#">Italian</a></li>
+                                    <li><a href="#">Latvian</a></li>
+                                    <li><a href="#">Spanish</a></li>
+                                    <li><a href="#">Greek</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <!-- Dropdown -->
+                                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink2" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Currency
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
+                                    <li><a href="#">Canadian Dollar</a></li>
+                                    <li><a href="#">Swiss Franc</a></li>
+                                    <li><a href="#">Chinese Yuan</a></li>
+                                    <li><a href="#">Australian Dollar</a></li>
+                                    <li><a href="#">Swedish Krona</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col col-md-5 col-lg-4 text-center">
+                    <p class="text-body2 mb-0 fs-xs fw-semibold font-theme d-none d-md-inline-block"><span class="text-theme">Free exress</span> international delevery + Easy returens</p>
+                </div>
+                <div class="col-sm-5 col-md-3 col-lg-4 text-center text-sm-end">
+                    <div class="social-header fs-xs">
+                        <span class="text-body2 fs-xs fw-semibold font-theme me-2">Social Network</span>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fal fa-basketball-ball"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--========================
+    Sticky Header
+========================-->
+    <div class="sticky-header-wrap sticky-header py-2 py-lg-1">
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-5 col-md-3">
+                    <div class="logo">
+                        <a th:href="@{/foodano/index.html}"><img th:src="@{/ajax/foodano/img/logo.svg}" alt="Foodano"></a>
+                    </div>
+                </div>
+                <div class="col-7 col-md-9 text-end position-static">
+                    <nav class="main-menu menu-sticky1 d-none d-lg-block link-inherit">
+                        <ul>
+                            <li class="menu-item-has-children">
+                                <a th:href="@{/foodano/index.html}">Home</a>
+                                <ul class="sub-menu">
+                                    <li><a th:href="@{/foodano/index.html}">Home Style 1</a></li>
+                                    <li><a th:href="@{/foodano/index-2.html}">Home Style 2</a></li>
+                                    <li><a th:href="@{/foodano/index-3.html}">Home Style 3</a></li>
+                                    <li><a th:href="@{/foodano/index-4.html}">Home Style 4</a></li>
+                                    <li><a th:href="@{/foodano/index-5.html}">Home Style 5</a></li>
+                                    <li><a th:href="@{/foodano/index-6.html}">Home Style 6</a></li>
+                                    <li><a th:href="@{/foodano/index-7.html}">Home Style 7</a></li>
+                                    <li><a th:href="@{/foodano/index-8.html}">Home Style 8</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a th:href="@{/foodano/shop.html}">Shop</a>
+                                <ul class="sub-menu">
+                                    <li><a th:href="@{/foodano/shop.html}">Shop</a></li>
+                                    <li><a th:href="@{/foodano/shop-list.html}">Shop List</a></li>
+                                    <li><a th:href="@{/foodano/shop-details.html}">Shop Details</a></li>
+                                    <li><a th:href="@{/foodano/cart.html}">Shopping Cart</a></li>
+                                    <li><a th:href="@{/foodano/checkout.html}">Check Out</a></li>
+                                    <li><a th:href="@{/foodano/wishlist.html}">Wishlist</a></li>
+                                    <li><a th:href="@{/foodano/login-register.html}">Login & Register</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a th:href="@{/foodano/blog.html}">Blog</a>
+                                <ul class="sub-menu">
+                                    <li><a th:href="@{/foodano/blog.html}">Blog</a></li>
+                                    <li><a th:href="@{/foodano/blog-list.html}">Blog List</a></li>
+                                    <li><a th:href="@{/foodano/blog-grid.html}">Blog Grid</a></li>
+                                    <li><a th:href="@{/foodano/blog-grid-sidebar.html}">Blog Grid Sidebar</a></li>
+                                    <li><a th:href="@{/foodano/blog-masonry.html}">Blog Masonry</a></li>
+                                    <li><a th:href="@{/foodano/blog-details.html}">Blog Details</a></li>
+                                </ul>
+                            </li>
+                            <li class="mega-menu-wrap menu-item-has-children">
+                                <a href="#">Pages</a>
+                                <ul class="mega-menu">
+                                    <li><a th:href="@{/foodano/shop.html}">Pagelist 1</a>
+                                        <ul>
+                                            <li><a th:href="@{/foodano/index.html}">Home Style 1</a></li>
+                                            <li><a th:href="@{/foodano/index-2.html}">Home Style 2</a></li>
+                                            <li><a th:href="@{/foodano/index-3.html}">Home Style 3</a></li>
+                                            <li><a th:href="@{/foodano/index-4.html}">Home Style 4</a></li>
+                                            <li><a th:href="@{/foodano/index-5.html}">Home Style 5</a></li>
+                                            <li><a th:href="@{/foodano/index-6.html}">Home Style 6</a></li>
+                                            <li><a th:href="@{/foodano/index-7.html}">Home Style 7</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Pagelist 2</a>
+                                        <ul>
+                                            <li><a th:href="@{/foodano/index-8.html}">Home Style 8</a></li>
+                                            <li><a th:href="@{/foodano/about.html}">About</a></li>
+                                            <li><a th:href="@{/foodano/service.html}">Services</a></li>
+                                            <li><a th:href="@{/foodano/team.html}">Team</a></li>
+                                            <li><a th:href="@{/foodano/faq.html}">FAQ Page</a></li>
+                                            <li><a th:href="@{/foodano/contact.html}">Contact Us</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Pagelist 3</a>
+                                        <ul>
+                                            <li><a th:href="@{/foodano/blog.html}">Blog</a></li>
+                                            <li><a th:href="@{/foodano/blog-list.html}">Blog List</a></li>
+                                            <li><a th:href="@{/foodano/blog-grid.html}">Blog Grid</a></li>
+                                            <li><a th:href="@{/foodano/blog-grid-sidebar.html}">Blog Grid Sidebar</a></li>
+                                            <li><a th:href="@{/foodano/blog-masonry.html}">Blog Masonry</a></li>
+                                            <li><a th:href="@{/foodano/blog-details.html}">Blog Details</a></li>
+                                            <li><a th:href="@{/foodano/error.html}">Error Page</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Pagelist 4</a>
+                                        <ul>
+                                            <li><a th:href="@{/foodano/shop.html}">Shop</a></li>
+                                            <li><a th:href="@{/foodano/shop-list.html}">Shop List</a></li>
+                                            <li><a th:href="@{/foodano/shop-details.html}">Shop Details</a></li>
+                                            <li><a th:href="@{/foodano/cart.html}">Shopping Cart</a></li>
+                                            <li><a th:href="@{/foodano/checkout.html}">Check Out</a></li>
+                                            <li><a th:href="@{/foodano/wishlist.html}">Wishlist</a></li>
+                                            <li><a th:href="@{/foodano/login-register.html}">Login / Register</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a th:href="@{/foodano/contact.html}">Contact Us</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <button class="vs-menu-toggle d-inline-block d-lg-none"><i class="far fa-bars"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==============================
+    Mobile Menu
+  ============================== -->
+    <div class="vs-menu-wrapper">
+        <div class="vs-menu-area">
+            <button class="vs-menu-toggle"><i class="fal fa-times"></i></button>
+            <div class="mobile-logo">
+                <a th:href="@{/foodano/index.html}"><img th:src="@{/ajax/foodano/img/logo.svg}" alt="Foodano"></a>
+            </div>
+            <div class="vs-mobile-menu link-inherit"></div><!-- Menu Will Append With Javascript -->
+        </div>
+    </div>
+    <!--==============================
+    Sidemenu
+============================== -->
+    <div class="sidemenu-wrapper d-none d-lg-block  ">
+        <div class="sidemenu-content">
+            <button class="closeButton border-theme text-theme bg-theme-hover sideMenuCls"><i class="far fa-times"></i></button>
+            <div class="widget widget_shopping_cart">
+                <h3 class="widget_title">Shopping cart</h3>
+                <div class="widget_shopping_cart_content">
+                    <ul class="cart_list ">
+                        <li class="mini_cart_item">
+                            <a th:href="@{/foodano/shop.html}" class="remove"><i class="fal fa-trash-alt"></i></a>
+                            <a th:href="@{/foodano/shop.html}"><img th:src="@{/ajax/foodano/img/cart/cart-img-1-1.jpg}" alt="Cart Image">Hot Burger</a>
+                            <span class="quantity">1 ×
+                                <span class="amount">
+                                    <span>$</span>40.00
+                                </span>
+                            </span>
+                        </li>
+                        <li class="mini_cart_item">
+                            <a th:href="@{/foodano/shop.html}" class="remove"><i class="fal fa-trash-alt"></i></a>
+                            <a th:href="@{/foodano/shop.html}"><img th:src="@{/ajax/foodano/img/cart/cart-img-1-2.jpg}" alt="Cart Image">Vegetable</a>
+                            <span class="quantity">1 ×
+                                <span class="amount">
+                                    <span>$</span>99.00
+                                </span>
+                            </span>
+                        </li>
+
+                        <li class="mini_cart_item">
+                            <a th:href="@{/foodano/shop.html}" class="remove"><i class="fal fa-trash-alt"></i></a>
+                            <a th:href="@{/foodano/shop.html}"><img th:src="@{/ajax/foodano/img/cart/cart-img-1-3.jpg}" alt="Cart Image">Pop Pizza</a>
+                            <span class="quantity">1 ×
+                                <span class="amount">
+                                    <span>$</span>56.00
+                                </span>
+                            </span>
+                        </li>
+                        <li class="mini_cart_item">
+                            <a th:href="@{/foodano/shop.html}" class="remove"><i class="fal fa-trash-alt"></i></a>
+                            <a th:href="@{/foodano/shop.html}"><img th:src="@{/ajax/foodano/img/cart/cart-img-1-4.jpg}" alt="Cart Image">Onion & Tomato</a>
+                            <span class="quantity">1 ×
+                                <span class="amount">
+                                    <span>$</span>23.00
+                                </span>
+                            </span>
+                        </li>
+                        <li class="mini_cart_item">
+                            <a th:href="@{/foodano/shop.html}" class="remove"><i class="fal fa-trash-alt"></i></a>
+                            <a th:href="@{/foodano/shop.html}"><img th:src="@{/ajax/foodano/img/cart/cart-img-1-5.jpg}" alt="Cart Image">Cool Drinks</a>
+                            <span class="quantity">1 ×
+                                <span class="amount">
+                                    <span>$</span>100.00
+                                </span>
+                            </span>
+                        </li>
+                    </ul>
+                    <p class="total">
+                        <strong>Subtotal:</strong>
+                        <span class="amount">
+                            <span>$</span>318.00
+                        </span>
+                    </p>
+                    <p class="buttons">
+                        <a th:href="@{/foodano/cart.html}" class="vs-btn">View cart</a>
+                        <a th:href="@{/foodano/checkout.html}" class="vs-btn">Checkout</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==============================
+        Header Area
+    ==============================-->
+    <header class="header-wrapper header-layout3 header3-margin ">
+        <div class="container py-30">
+            <div class="row align-items-center">
+                <div class="col-6">
+                    <div class="header-logo">
+                        <a th:href="@{/foodano/index.html}"><img th:src="@{/ajax/foodano/img/logo.svg}" alt="Foodano"></a>
+                    </div>
+                </div>
+                <div class="col-6 text-end">
+                    <button type="button" class="vs-menu-toggle d-inline-block d-lg-none"><i class="far fa-bars"></i></button>
+                    <div class="head-top-links text-body2 d-none d-lg-block">
+                        <a th:href="@{/foodano/wishlist.html}" class="icon-btn has-badge bg3 me-3"><i class="fal fa-heart"></i><span class="badge">0</span></a>
+                        <a href="#" class="icon-btn has-badge bg2 me-4 sideMenuToggler"><i class="fal fa-shopping-cart"></i><span class="badge">0</span></a>
+                        <span class="icon-btn bg4"><i class="fal fa-user"></i></span>
+                        <ul>
+                            <li><a th:href="@{/foodano/login-register.html}">Login</a></li>
+                            <li><a th:href="@{/foodano/login-register.html}">Register</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container d-none d-lg-block">
+            <div class="header3-inner position-relative">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-xl-7">
+                        <nav class="main-menu menu-style1 mobile-menu-active menu-style2">
+                            <ul>
+                                <li class="menu-item-has-children">
+                                    <a th:href="@{/foodano/index.html}">Home</a>
+                                    <ul class="sub-menu">
+                                        <li><a th:href="@{/foodano/index.html}">Home Style 1</a></li>
+                                        <li><a th:href="@{/foodano/index-2.html}">Home Style 2</a></li>
+                                        <li><a th:href="@{/foodano/index-3.html}">Home Style 3</a></li>
+                                        <li><a th:href="@{/foodano/index-4.html}">Home Style 4</a></li>
+                                        <li><a th:href="@{/foodano/index-5.html}">Home Style 5</a></li>
+                                        <li><a th:href="@{/foodano/index-6.html}">Home Style 6</a></li>
+                                        <li><a th:href="@{/foodano/index-7.html}">Home Style 7</a></li>
+                                        <li><a th:href="@{/foodano/index-8.html}">Home Style 8</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a th:href="@{/foodano/shop.html}">Shop</a>
+                                    <ul class="sub-menu">
+                                        <li><a th:href="@{/foodano/shop.html}">Shop</a></li>
+                                        <li><a th:href="@{/foodano/shop-list.html}">Shop List</a></li>
+                                        <li><a th:href="@{/foodano/shop-details.html}">Shop Details</a></li>
+                                        <li><a th:href="@{/foodano/cart.html}">Shopping Cart</a></li>
+                                        <li><a th:href="@{/foodano/checkout.html}">Check Out</a></li>
+                                        <li><a th:href="@{/foodano/wishlist.html}">Wishlist</a></li>
+                                        <li><a th:href="@{/foodano/login-register.html}">Login & Register</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a th:href="@{/foodano/blog.html}">Blog</a>
+                                    <ul class="sub-menu">
+                                        <li><a th:href="@{/foodano/blog.html}">Blog</a></li>
+                                        <li><a th:href="@{/foodano/blog-list.html}">Blog List</a></li>
+                                        <li><a th:href="@{/foodano/blog-grid.html}">Blog Grid</a></li>
+                                        <li><a th:href="@{/foodano/blog-grid-sidebar.html}">Blog Grid Sidebar</a></li>
+                                        <li><a th:href="@{/foodano/blog-masonry.html}">Blog Masonry</a></li>
+                                        <li><a th:href="@{/foodano/blog-details.html}">Blog Details</a></li>
+                                    </ul>
+                                </li>
+                                <li class="mega-menu-wrap menu-item-has-children">
+                                    <a href="#">Pages</a>
+                                    <ul class="mega-menu">
+                                        <li><a th:href="@{/foodano/shop.html}">Pagelist 1</a>
+                                            <ul>
+                                                <li><a th:href="@{/foodano/index.html}">Home Style 1</a></li>
+                                                <li><a th:href="@{/foodano/index-2.html}">Home Style 2</a></li>
+                                                <li><a th:href="@{/foodano/index-3.html}">Home Style 3</a></li>
+                                                <li><a th:href="@{/foodano/index-4.html}">Home Style 4</a></li>
+                                                <li><a th:href="@{/foodano/index-5.html}">Home Style 5</a></li>
+                                                <li><a th:href="@{/foodano/index-6.html}">Home Style 6</a></li>
+                                                <li><a th:href="@{/foodano/index-7.html}">Home Style 7</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Pagelist 2</a>
+                                            <ul>
+                                                <li><a th:href="@{/foodano/index-8.html}">Home Style 8</a></li>
+                                                <li><a th:href="@{/foodano/about.html}">About</a></li>
+                                                <li><a th:href="@{/foodano/service.html}">Services</a></li>
+                                                <li><a th:href="@{/foodano/team.html}">Team</a></li>
+                                                <li><a th:href="@{/foodano/faq.html}">FAQ Page</a></li>
+                                                <li><a th:href="@{/foodano/contact.html}">Contact Us</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Pagelist 3</a>
+                                            <ul>
+                                                <li><a th:href="@{/foodano/blog.html}">Blog</a></li>
+                                                <li><a th:href="@{/foodano/blog-list.html}">Blog List</a></li>
+                                                <li><a th:href="@{/foodano/blog-grid.html}">Blog Grid</a></li>
+                                                <li><a th:href="@{/foodano/blog-grid-sidebar.html}">Blog Grid Sidebar</a></li>
+                                                <li><a th:href="@{/foodano/blog-masonry.html}">Blog Masonry</a></li>
+                                                <li><a th:href="@{/foodano/blog-details.html}">Blog Details</a></li>
+                                                <li><a th:href="@{/foodano/error.html}">Error Page</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Pagelist 4</a>
+                                            <ul>
+                                                <li><a th:href="@{/foodano/shop.html}">Shop</a></li>
+                                                <li><a th:href="@{/foodano/shop-list.html}">Shop List</a></li>
+                                                <li><a th:href="@{/foodano/shop-details.html}">Shop Details</a></li>
+                                                <li><a th:href="@{/foodano/cart.html}">Shopping Cart</a></li>
+                                                <li><a th:href="@{/foodano/checkout.html}">Check Out</a></li>
+                                                <li><a th:href="@{/foodano/wishlist.html}">Wishlist</a></li>
+                                                <li><a th:href="@{/foodano/login-register.html}">Login / Register</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a th:href="@{/foodano/contact.html}">Contact Us</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-6 col-xl-5">
+                        <form action="#" class="header-search">
+                            <input type="text" placeholder="Search your product" class="form-control">
+                            <button type="submit" class="vs-btn">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--==============================
+    Breadcumb
+============================== -->
+    <div class="breadcumb-wrapper breadcumb-layout1 bg-fluid pt-200 pb-200" data-bg-th:src="@{/ajax/foodano/img/breadcumb/breadcumb-img-1.jpg}">
+        <div class="container">
+            <div class="breadcumb-content text-center">
+                <h1 class="breadcumb-title">FAQ</h1>
+                <ul class="breadcumb-menu-style1 mx-auto">
+                    <li><a th:href="@{/foodano/index.html}">Home</a></li>
+                    <li class="active">FAQ</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--==============================
+    FAQ Area
+    ==============================-->
+    <section class="vs-faq-wrapper space-top space-md-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 col-lg-5">
+                    <div class="section-title mb-0 mb-lg-4 pb-1">
+                        <h2 class="sec-title1">Why we are</h2>
+                        <h3 class="sec-title2">the best</h3>
+                        <img th:src="@{/ajax/foodano/img/icons/sec-icon-1.png}" alt="Section Icon">
+                        <p class="fs-xs fst-italic fw-bold mt-lg-4 pt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna .</p>
+                    </div>
+                    <ul class="faq-list fs-xs list-unstyled faq-list fs-xs list-unstyled mb-0 mb-lg-4 pb-3">
+                        <li><strong>Aenean vehicula odio eget elit placerat consectetur.</strong></li>
+                        <li><strong>Integer at tortor cursus arcu faucibus accumsan.</strong></li>
+                        <li><strong>Vestibulum cursus purus at ligula posuere, viverra vehicula justo </strong></li>
+                    </ul>
+                    <ul class="faq-list fs-xs list-unstyled mb-30">
+                        <li><strong>Sed vel neque nec ligula sodales venenatis.</strong></li>
+                        <li><strong>Sed in erat ullamcorper, ullamcorper nulla vel, congue justo.</strong></li>
+                        <li><strong>Curabitur interdum ipsum interdum lectus porttitor tristique.</strong></li>
+                    </ul>
+                </div>
+                <div class="col-xl-6 offset-xl-1">
+                    <div class="vs-accordion accordion-style2">
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <h3 class="accordion-title fw-semibold">01 . Marketing Is A Company’s Ultimate Objective?</h3>
+                            </div>
+                            <div class="accordion-body">
+                                <p class="accordion-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <h3 class="accordion-title fw-semibold">02 . It’s Better To Be First In The Mind Than To Be First In The Marketplace?</h3>
+                            </div>
+                            <div class="accordion-body">
+                                <p class="accordion-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header">
+                                <h3 class="accordion-title fw-semibold">03 . Positioning Is What You Do To The Mind Of The Prospect?</h3>
+                            </div>
+                            <div class="accordion-body">
+                                <p class="accordion-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--==============================
+			Footer Area
+	==============================-->
+    <div class="bg2" data-bg-th:src="@{/ajax/foodano/img/footer/footer-bg-1.jpg}">
+        <!--==============================
+    Subscribe Area
+    ==============================-->
+        <section class="vs-newsletter-wrpper   ">
+            <div class="container">
+                <div class="inner-wrap1 bg-fluid px-70 py-70" data-bg-th:src="@{/ajax/foodano/img/bg/newsletter-bg-1-1.png}">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-xl-6">
+                            <div class="form-title mb-30 mb-xl-0 text-center text-xl-start">
+                                <span class="sub-title3">Get Connected</span>
+                                <h2 class="h1 mb-0 lh-1">Subscribe <span class="fw-light text-theme">Newsletter</span></h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-xl-6">
+                            <form action="#" class="newsletter-style1">
+                                <div class="form-group m-0">
+                                    <input type="text" placeholder="Enter Your mail" class="form-control">
+                                    <button class="vs-btn style2">Subscribe Now</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer-wrapper footer-layout1">
+            <div class="container">
+                <div class="widget-area pt-100">
+                    <div class="row align-items-start justify-content-between">
+                        <div class="col-sm-6 col-lg-4 col-xl-3">
+                            <div class="widget footer-widget  ">
+                                <h3 class="widget_title">Contact Us</h3>
+                                <div class="vs-widget-about">
+                                    <p class="fs-md">6Fifth Avenue 5501, Broadway, New York Morris Street <br> London 1234</p>
+                                    <p class="mb-1 link-inherit"><i class="fas fa-paper-plane me-3"></i><a href="mailto:foodano@example.com">foodano@example.com</a></p>
+                                    <p class="mb-0 link-inherit"><i class="fal fa-fax me-3"></i><a href="tel:+123456789000">+(123) 4567 89000</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-2 col-xl-2">
+                            <div class="widget widget_nav_menu  footer-widget  ">
+                                <h3 class="widget_title">Useful Links</h3>
+                                <div class="menu-all-pages-container">
+                                    <ul class="menu">
+                                        <li><a th:href="@{/foodano/index.html}">Home</a></li>
+                                        <li><a th:href="@{/foodano/about.html}">About us</a></li>
+                                        <li><a th:href="@{/foodano/blog.html}">Blogs</a></li>
+                                        <li><a th:href="@{/foodano/error.html}">Terms Of Service</a></li>
+                                        <li><a th:href="@{/foodano/error.html}">Privacy Policy</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-2 col-xl-2">
+                            <div class="widget  footer-widget  ">
+                                <h3 class="widget_title">Follow Us Now</h3>
+                                <div class="footer-social-links">
+                                    <ul>
+                                        <li><a href="https://google.com"><i class="fab fa-facebook-f"></i>facebook</a></li>
+                                        <li><a href="https://google.com"><i class="fab fa-twitter"></i>twitter</a></li>
+                                        <li><a href="https://google.com"><i class="fab fa-behance"></i>Behance</a></li>
+                                        <li><a href="https://google.com"><i class="fal fa-basketball-ball"></i>dribvble</a></li>
+                                        <li><a href="https://google.com"><i class="fab fa-linkedin-in"></i>linkedin</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 col-xl-4">
+
+
+                            <div class="widget footer-widget   ">
+                                <h3 class="widget_title">Get Direction</h3>
+                                <div class="footer-map pt-1">
+                                    <iframe src="http://maps.baidu.com" style="border:0;" allowfullscreen="" aria-hidden="false"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright text-center pb-35">
+                    <p class="mb-0 link-inherit">Copyright &copy; 2022 <a th:href="@{/foodano/index.html}">Foodano</a> - All Rights Reserved By <a href="http://www.bootstrapmb.com">bootstrapMB</a></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <!--********************************
+			Code End  Here 
+	******************************** -->
+
+
+    <!-- Scroll Top Top Button -->
+    <a href="#" class="scrollToTop"><i class="far fa-angle-up"></i></a>
+
+
+
+
+    <!--==============================
+        All Js File
+    ============================== -->
+    <!-- Jquery -->
+    <script th:src="@{/ajax/foodano/js/vendor/jquery-3.6.0.min.js}"></script>
+    <!-- Slick Slider -->
+    <script th:src="@{/ajax/foodano/js/slick.min.js}"></script>
+    <!-- <script th:src="@{/ajax/foodano/js/app.min.js}"></script> -->
+    <!-- Layerslider -->
+    <script th:src="@{/ajax/foodano/js/layerslider.utils.js}"></script>
+    <script th:src="@{/ajax/foodano/js/layerslider.transitions.js}"></script>
+    <script th:src="@{/ajax/foodano/js/layerslider.kreaturamedia.jquery.js}"></script>
+    <!-- Bootstrap -->
+    <script th:src="@{/ajax/foodano/js/bootstrap.bundle.min.js}"></script>
+    <!-- Date Picker -->
+    <script th:src="@{/ajax/foodano/js/jquery.datetimepicker.min.js}"></script>
+    <!-- Filter -->
+    <script th:src="@{/ajax/foodano/js/imagesloaded.pkgd.min.js}"></script>
+    <script th:src="@{/ajax/foodano/js/isotope.pkgd.min.js}"></script>
+    <!-- Magnific Popup -->
+    <script th:src="@{/ajax/foodano/js/jquery.magnific-popup.min.js}"></script>
+    <!-- Jquery UI -->
+    <script th:src="@{/ajax/foodano/js/jquery-ui.min.js}"></script>
+    <!-- WOW JS (Animation JS) -->
+    <script th:src="@{/ajax/foodano/js/wow.min.js}"></script>
+    <!-- Custom Carousel -->
+    <script th:src="@{/ajax/foodano/js/vscustom-carousel.min.js}"></script>
+    <!-- Mobile Menu -->
+    <script th:src="@{/ajax/foodano/js/vsmenu.min.js}"></script>
+    <!-- Form Js -->
+    <script th:src="@{/ajax/foodano/js/ajax-mail.js}"></script>
+    <!-- Main Js File -->
+    <script th:src="@{/ajax/foodano/js/main.js}"></script>
+
+</body>
+
+</html>

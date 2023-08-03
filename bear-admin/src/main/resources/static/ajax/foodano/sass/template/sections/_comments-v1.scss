@@ -1,0 +1,159 @@
+
+
+.vs-comments-layout1 {
+  border-bottom: 1px solid $white-color;
+
+  li {
+    margin: 0;
+  }
+  
+  .vs-post-comment {
+    display: flex;
+    padding: 35px 35px 30px 35px;
+    border: 1px solid #dddddd;
+    margin-bottom: 30px;
+  }
+
+  ul.comment-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    ul,
+    ol {
+      margin-bottom: 20px;
+
+      ul,
+      ol {
+        margin-bottom: 0;
+      }
+    }
+
+  }
+
+  .author-img {
+    @include equal-size(100px);
+    margin-right: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .comment-content {
+    width: calc(100% - 130px);
+    margin-top: -5px;
+    position: relative;
+  }
+  
+  .commented-on {
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 700;
+    color: $theme-color;
+    font-family: $title-font;
+  }
+
+  .name {
+    margin-bottom: 2px;
+  }
+
+  .comment-top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .text {
+    color: #6b6b6b;
+    margin-bottom: 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  .children {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-left: 70px;
+  }
+
+  .replay-btn {
+    font-weight: 600;
+    font-family: $title-font;
+    font-size: 18px;
+    color: $body-color;
+    margin-top: 10px;
+    display: inline-block;
+    
+    i {
+      margin-right: 7px;
+    }
+
+    &:hover {
+      color: $theme-color;
+    }
+  }
+
+  .star-rating {
+    font-size: 12px;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 80px;
+  }
+
+  .comment-respond {
+    margin-bottom: 47px;
+  }
+
+
+}
+
+.woocommerce-Reviews {
+  .description {
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+
+@include md {
+  .vs-comments-layout1 {
+    &.pt-70 {
+      padding-top: 30px;
+    }
+    
+    .vs-post-comment {
+      padding: 25px 25px 20px 25px;
+    }
+  }
+
+}
+
+
+@include sm {
+  .vs-comments-layout1 {
+    .vs-post-comment {
+      display: block;
+    }
+
+    .author-img {
+      margin-right: 0;
+    }
+
+    .comment-content {
+      width: 100%;
+      margin-top: 15px;
+    }
+
+    .children {
+      margin-left: 30px;
+    }
+  }
+
+}
+

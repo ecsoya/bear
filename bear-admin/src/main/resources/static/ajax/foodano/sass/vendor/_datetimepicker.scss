@@ -1,0 +1,18 @@
+.xdsoft_datetimepicker {
+  z-index: 1080;
+  .xdsoft_datepicker {
+    width: 300px;
+  }
+
+  .xdsoft_current {
+    color: $theme-color;
+  }
+}
+
+
+@include xs {
+  .xdsoft_datetimepicker {
+    transform: scale(0.7);
+    transform-origin: top center;
+  }
+}

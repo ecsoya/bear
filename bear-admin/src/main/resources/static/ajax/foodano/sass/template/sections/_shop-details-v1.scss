@@ -1,0 +1,253 @@
+.product-big-img {
+  border: 1px solid $secondary-color;
+
+  .slick-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    bottom: 25px;
+    margin-bottom: 0;
+  }
+}
+
+
+.product-thumb-img {
+  .thumb {
+    width: 150px;
+    max-width: 100%;
+    border: 1px solid $secondary-color;
+    transition: all ease 0.4s;
+    cursor: pointer;
+  }
+
+  .slick-current {
+    .thumb {
+      border-color: $theme-color;
+    }
+  }
+
+  .slick-arrow {
+    position: absolute;
+    left: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background-color: transparent;
+    width: auto;
+    height: auto;
+    padding: 0;
+    line-height: 1;
+    font-size: 24px;
+    color: rgba(0,0,0,0.3);
+    opacity: 0;
+    visibility: hidden;
+
+    &.slick-next {
+      left: auto;
+      right: -60px;
+    }
+  }
+
+  .slick-dots {
+    margin-top: 20px;
+  }
+}
+
+.product-big-img,
+.product-thumb-img {
+  .slick-arrow {
+    position: absolute;
+    left: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background-color: transparent;
+    width: auto;
+    height: auto;
+    padding: 0;
+    line-height: 1;
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 3;
+
+    &.slick-next {
+      left: auto;
+      right: -60px;
+    }
+  }
+}
+
+.product-big-img {
+  .slick-arrow {
+    left: 30px;
+
+    &.slick-next {
+      left: auto;
+      right: 30px;
+    }
+  }
+}
+
+.container {
+  .row {
+    &:hover {
+      .product-big-img,
+      .product-thumb-img {
+        .slick-arrow {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
+
+.quantity.style2 {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+
+  input {
+    width: 75px;
+    height: 50px;
+    text-align: center;
+    border: 1px solid $secondary-color;
+    font-family: $body-font;
+    color: $body-color2;
+    font-weight: 600;
+    font-size: 18px;
+    padding-left: 0;
+    padding-right: 30px;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    &[type=number] {
+      -moz-appearance: textfield;
+    }
+  }
+
+  .qut-btn {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    line-height: 1;
+    color: #e6d6d6;
+    top: 8px;
+    font-size: 14px;
+
+    &.quantity-minus {
+      top: 26px;
+    }
+
+    &:hover {
+      color: $theme-color;
+    }
+  }
+}
+
+
+.product_meta {
+  color: $body-color;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: capitalize;
+  font-family: $title-font;
+
+  >span {
+    display: block;
+    margin-bottom: 3px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: inherit;
+
+      &:hover {
+        color: $theme-color;
+      }
+    }
+
+    >a,
+    >span {
+      position: relative;
+      margin-right: 3px;
+
+      &:first-child {
+        margin-left: 5px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+
+
+.product-tab-style1 {
+  border-bottom: 1px solid #f7f3f3;
+  
+  a {
+    color: #959595;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    display: inline-block;
+    position: relative;
+    line-height: 1;
+    padding:  0 20px 10px 20px;
+    font-family: $title-font;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      height: 1px;
+      width: 0;
+      background-color: $theme-color;
+      transition: all ease 0.4s;
+    }
+
+    &.active {
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+
+.product-inner-list {
+  >ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  li {
+    position: relative;
+    padding-left: 15px;
+
+    &:before {
+      content: '-';
+      position: absolute;
+      left: 0;
+    }
+  }
+}

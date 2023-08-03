@@ -1,0 +1,229 @@
+.banner-style1 {
+  height: 390px;
+  position: relative;
+
+  .banner-subtitle {
+    font-size: 35px;
+    font-weight: 700;
+    font-family: $theme-font3;
+    color: $white-color;
+    margin: 0 0 15px 0;
+    display: block;
+  }
+
+  .banner-title {
+    font-size: 35px;
+    color: $white-color;
+    margin: 0 0 0 0;
+  }
+
+  .banner-content {
+    position: absolute;
+    left: 47px;
+    bottom: 43px;
+    max-width: 260px;
+  }
+}
+
+
+.banner-style2 {
+  text-align: center;
+  padding: 110px 0;
+  margin: 80px 0 0 -95px;
+  position: relative;
+  z-index: 1;
+
+  .banner-shape {
+    position: absolute;
+    top: var(--shape-gap, 20px);
+    right: var(--shape-gap, 20px);
+    bottom: var(--shape-gap, 20px);
+    left: var(--shape-gap, 20px);
+    border: 10px solid #fcd55c;
+  }
+
+  .banner-logo {
+    margin: 0 0 45px 0;
+  }
+
+  .banner-title {
+    font-size: 90px;
+    line-height: 0.95;
+    color: #fcd55c;
+    font-family: $theme-font3;
+    position: relative;
+    display: inline-block;
+    padding: 0 0 3px 0;
+    margin: 0 0 30px 0;
+
+    &:after,
+    &:before {
+      content: '';
+      position: absolute;
+      left: 1%;
+      top: 0;
+      width: 98%;
+      height: 2px;
+      background-color: currentColor;
+    }
+
+    &:after {
+      top: auto;
+      bottom: 0;
+    }
+  }
+
+  .banner-text {
+    color: $white-color;
+    font-size: 18px;
+    margin: 0 0 20px 0;
+  }
+
+  .vs-btn,
+  .banner-text,
+  .banner-title,
+  .banner-logo {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.banner-style3 {
+  padding: 35px 30px 30px 30px;
+  background-position: left center;
+  max-width: 500px;
+  
+  .banner-pill {
+    width: 110px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fcdb72;
+    margin: 0 0 20px 0;
+    border-radius: 50%;
+
+    .number,
+    .text {
+      font-family: $theme-font3;
+      color: #000000;
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 1;
+    }
+
+    .number {
+      font-size: 50px;
+    }
+  }
+
+  .banner-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: $white-color;
+    margin: 0 0 8px 0;
+  }
+  
+  .banner-text {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    margin: 0 0 0 0;
+    max-width: 180px;
+    color: $white-color;
+  }
+
+  &.layout1 {
+    margin: 5px 0 -140px 0;
+  }
+
+}
+
+.banner-wrap1 {
+  margin-bottom: -195px;
+}
+
+
+@include xl {
+  .banner-style1 {
+    height: 290px;
+
+    .banner-subtitle {
+      font-size: 20px;
+      margin: 0 0 5px 0;
+    }
+
+    .banner-content {
+      left: 30px;
+      bottom: 20px;
+      max-width: 220px;
+    }
+
+    .banner-title {
+      font-size: 24px;
+    }
+  }
+
+  .banner-wrap1 {
+    margin-bottom: -145px;
+  }
+}
+
+@include lg {
+  .banner-style2 {
+    text-align: center;
+    padding: 110px 0;
+    margin: 0 0 0 0;
+    position: relative;
+    z-index: 1;
+
+    .banner-title {
+      font-size: 72px;
+    }
+  }
+
+  .banner-style3.layout1 {
+    margin: 0 0 0 0;
+  }
+}
+
+@include md {
+  .banner-wrap1 {
+    padding-bottom: 60px;
+    margin-bottom: 0;
+  }
+
+  .banner-style3 {
+    max-width: 100%;
+  }
+}
+
+@include sm {
+  .banner-style2 {
+    padding: 60px 30px;
+
+    .banner-shape {
+      border: 5px solid #fcd55c;
+      --shape-gap: 10px;
+    }
+
+    .banner-title {
+      font-size: 50px;
+      margin: 0 0 20px 0;
+    }
+
+    .banner-text {
+      font-size: 14px;
+      margin: 0 0 20px 0;
+    }
+
+    .vs-btn.style5 {
+      padding-left: 30px;
+    }
+
+    .banner-logo {
+      margin: 0 0 30px 0;
+    }
+  }
+}

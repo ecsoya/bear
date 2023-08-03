@@ -1,0 +1,47 @@
+@media (min-width: $md) {
+
+  /*-- margin Left And Right --*/
+  @for $i from 1 through $lg-space-count {
+    .mx-lg-#{5 * $i} {
+      margin-right: 5px *$i;
+      margin-left: 5px *$i;
+    }
+  }
+
+  /*-- margin Top And Bottom --*/
+  @for $i from 1 through $lg-space-count {
+    .my-lg-#{5 * $i} {
+      margin-top: 5px *$i;
+      margin-bottom: 5px *$i;
+    }
+  }
+
+  /*-- margin Top --*/
+  @for $i from 1 through $lg-space-count {
+    .mt-lg-#{5 * $i} {
+      margin-top: 5px *$i;
+    }
+  }
+
+  /*-- margin Bottom --*/
+  @for $i from 1 through $lg-space-count {
+    .mb-lg-#{5 * $i} {
+      margin-bottom: 5px *$i;
+    }
+  }
+
+  /*-- margin Left --*/
+  @for $i from 1 through $lg-space-count {
+    .ml-lg-#{5 * $i} {
+      margin-left: 5px *$i;
+    }
+  }
+
+  /*-- margin Right --*/
+  @for $i from 1 through $lg-space-count {
+    .mr-lg-#{5 * $i} {
+      margin-right: 5px *$i;
+    }
+  }
+
+}

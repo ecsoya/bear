@@ -1,0 +1,621 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bidout - Auction and Bidding HTML Template</title>
+    <link rel="icon" th:href="@{/ajax/auction/images/bg/sm-logo.png}" type="image/gif" sizes="20x20">
+    <link rel="stylesheet" th:href="@{/ajax/auction/css/animate.css}">
+    <link rel="stylesheet" th:href="@{/ajax/auction/css/all.css}">
+    <link rel="stylesheet" th:href="@{/ajax/auction/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/ajax/auction/css/boxicons.min.css}">
+    <link rel="stylesheet" th:href="@{/ajax/auction/css/bootstrap-icons.css}">
+    <link rel="stylesheet" th:href="@{/ajax/auction/css/jquery-ui.css}">
+    <link rel="stylesheet" th:href="@{/ajax/auction/css/swiper-bundle.min.css}">
+    <link rel="stylesheet" th:href="@{/ajax/auction/css/slick-theme.css}">
+    <link rel="stylesheet" th:href="@{/ajax/auction/css/slick.css}">
+    <link rel="stylesheet" th:href="@{/ajax/auction/css/nice-select.css}">
+    <link rel="stylesheet" th:href="@{/ajax/auction/css/magnific-popup.css}">
+    <link rel="stylesheet" th:href="@{/ajax/auction/css/odometer.css}">
+    <link rel="stylesheet" th:href="@{/ajax/auction/css/style.css}">
+</head>
+<body>
+    <div class="preloader">
+        <div class="loader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <div class="mobile-search">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-11">
+                    <label>What are you lookking for?</label>
+                    <input type="text" placeholder="Search Products, Category, Brand">
+                </div>
+                <div class="col-1 d-flex justify-content-end align-items-center">
+                    <div class="search-cross-btn">
+                        <i class="bi bi-x"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="topbar">
+        <div class="topbar-left d-flex flex-row align-items-center">
+            <h6>Follow Us</h6>
+            <ul class="topbar-social-list gap-2">
+                <li><a href="https://www.facebook.com/"><i class='bx bxl-facebook'></i></a></li>
+                <li><a href="https://www.twitter.com/"><i class='bx bxl-twitter'></i></a></li>
+                <li><a href="https://www.instagram.com/"><i class='bx bxl-instagram'></i></a></li>
+                <li><a href="https://www.pinterest.com/"><i class='bx bxl-pinterest-alt'></i></a></li>
+            </ul>
+        </div>
+        <div class="email-area">
+            <h6>Email: <a href="/cdn-cgi/l/email-protection#71121e1f05101205311409101c011d145f121e1c"><span class="__cf_email__" data-cfemail="e4878b8a90858790a4819c8589948881ca878b89">[email&#160;protected]</span></a></h6>
+        </div>
+        <div class="topbar-right gap-2">
+            <a th:href="@{/auction/join-merchant.html}">Join Merchant</a>
+            <select>
+                <option>USD</option>
+                <option>EURO</option>
+                <option>TAKA</option>
+                <option>RUPEE</option>
+            </select>
+        </div>
+    </div>
+    <header class="header-area style-1">
+        <div class="header-logo">
+            <a th:href="@{/auction/index.html}"><img alt="image" th:src="@{/ajax/auction/images/bg/header-logo.png}"></a>
+        </div>
+        <div class="main-menu">
+            <div class="mobile-logo-area d-lg-none d-flex justify-content-between align-items-center">
+                <div class="mobile-logo-wrap ">
+                    <a th:href="@{/auction/index.html}"><img alt="image" th:src="@{/ajax/auction/images/bg/header-logo.png}"></a>
+                </div>
+                <div class="menu-close-btn">
+                    <i class="bi bi-x-lg"></i>
+                </div>
+            </div>
+            <ul class="menu-list">
+                <li class="menu-item-has-children">
+                    <a href="#" class="drop-down">Home</a><i class='bx bx-plus dropdown-icon'></i>
+                    <ul class="submenu">
+                        <li><a th:href="@{/auction/index.html}">Home 1</a></li>
+                        <li><a th:href="@{/auction/index2.html}">Home 2</a></li>
+                        <li><a th:href="@{/auction/index3.html}">Home 3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a th:href="@{/auction/about.html}">About Us</a>
+                </li>
+                <li>
+                    <a th:href="@{/auction/how-works.html}">How It Works</a>
+                </li>
+                <li>
+                    <a th:href="@{/auction/live-auction.html}">Browse Product</a>
+                </li>
+                <li class="menu-item-has-children">
+                    <a href="#">News</a><i class='bx bx-plus dropdown-icon'></i>
+                    <ul class="submenu">
+                        <li><a th:href="@{/auction/blog.html}">Blog</a></li>
+                        <li><a th:href="@{/auction/blog-details.html}">Blog Details</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children">
+                    <a href="#" class="drop-down">Pages</a><i class='bx bx-plus dropdown-icon'></i>
+                    <ul class="submenu">
+                        <li><a th:href="@{/auction/auction-details.html}">Auction Details</a></li>
+                        <li><a th:href="@{/auction/faq.html}">Faq</a></li>
+                        <li><a th:href="@{/auction/dashboard.html}">Dashboard</a></li>
+                        <li><a th:href="@{/auction/login.html}">Login</a></li>
+                        <li><a th:href="@{/auction/signup.html}">Sign Up</a></li>
+                        <li><a th:href="@{/auction/404.html}">404</a></li>
+                    </ul>
+                </li>
+                <li><a th:href="@{/auction/contact.html}">Contact</a></li>
+            </ul>
+            <div class="d-lg-none d-block">
+                <form class="mobile-menu-form">
+                    <div class="input-with-btn d-flex flex-column">
+                        <input type="text" placeholder="Search here...">
+                        <button type="submit" class="eg-btn btn--primary btn--sm">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="nav-right d-flex align-items-center">
+            <div class="hotline d-xxl-flex d-none">
+                <div class="hotline-icon">
+                    <img alt="image" th:src="@{/ajax/auction/images/icons/header-phone.svg}">
+                </div>
+                <div class="hotline-info">
+                    <span>Click To Call</span>
+                    <h6><a href="tel:347-274-8816">+347-274-8816</a></h6>
+                </div>
+            </div>
+            <div class="search-btn">
+                <i class="bi bi-search"></i>
+            </div>
+            <div class="eg-btn btn--primary header-btn">
+                <a th:href="@{/auction/dashboard.html}">My Account</a>
+            </div>
+            <div class="mobile-menu-btn d-lg-none d-block">
+                <i class='bx bx-menu'></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="inner-banner">
+        <div class="container">
+            <h2 class="inner-banner-title  wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".4s">Auction Details</h2>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a th:href="@{/auction/index.html}">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Auction Details</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <div class="auction-details-section pt-120">
+        <img alt="image" th:src="@{/ajax/auction/images/bg/section-bg.png}" class="img-fluid section-bg-top">
+        <img alt="image" th:src="@{/ajax/auction/images/bg/section-bg.png}" class="img-fluid section-bg-bottom">
+        <div class="container">
+            <div class="row g-4 mb-50">
+                <div class="col-xl-6 col-lg-7 d-flex flex-row align-items-start justify-content-lg-start justify-content-center flex-md-nowrap flex-wrap gap-4">
+                    <ul class="nav small-image-list d-flex flex-md-column flex-row justify-content-center gap-4  wow fadeInDown" data-wow-duration="1.5s" data-wow-delay=".4s">
+                        <li class="nav-item">
+                            <div id="details-img1" data-bs-toggle="pill" data-bs-target="#gallery-img1" aria-controls="gallery-img1">
+                                <img alt="image" th:src="@{/ajax/auction/images/bg/prod-gallery1.png}" class="img-fluid">
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div id="details-img2" data-bs-toggle="pill" data-bs-target="#gallery-img2" aria-controls="gallery-img2">
+                                <img alt="image" th:src="@{/ajax/auction/images/bg/prod-gallery2.png}" class="img-fluid">
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div id="details-img3" data-bs-toggle="pill" data-bs-target="#gallery-img3" aria-controls="gallery-img3">
+                                <img alt="image" th:src="@{/ajax/auction/images/bg/prod-gallery3.png}" class="img-fluid">
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="tab-content mb-4 d-flex justify-content-lg-start justify-content-center  wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".4s">
+                        <div class="tab-pane big-image fade show active" id="gallery-img1">
+                            <div class="auction-gallery-timer d-flex align-items-center justify-content-center flex-wrap">
+                                <h3 id="countdown-timer-1">&nbsp;</h3>
+                            </div>
+                            <img alt="image" th:src="@{/ajax/auction/images/bg/prod-gallery1.png}" class="img-fluid">
+                        </div>
+                        <div class="tab-pane big-image fade" id="gallery-img2">
+                            <div class="auction-gallery-timer d-flex align-items-center justify-content-center">
+                                <h3 id="countdown-timer-2">&nbsp;</h3>
+                            </div>
+                            <img alt="image" th:src="@{/ajax/auction/images/bg/prod-gallery2.png}" class="img-fluid">
+                        </div>
+                        <div class="tab-pane big-image fade" id="gallery-img3">
+                            <div class="auction-gallery-timer d-flex align-items-center justify-content-center">
+                                <h3 id="countdown-timer-3">&nbsp;</h3>
+                            </div>
+                            <img alt="image" th:src="@{/ajax/auction/images/bg/prod-gallery3.png}" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-5">
+                    <div class="product-details-right  wow fadeInDown" data-wow-duration="1.5s" data-wow-delay=".2s">
+                        <h3>Creative Fashion Riboon Digital Watch Little Elegant.</h3>
+                        <p class="para">Korem ipsum dolor amet, consectetur adipiscing elit. Maece nas in pulvinar neque. Nulla finibus lobortis pulvinar. Donec a consectetur nulla.</p>
+                        <h4>Bidding Price: <span>$465.00</span></h4>
+                        <div class="bid-form">
+                            <div class="form-title">
+                                <h5>Bid Now</h5>
+                                <p>Bid Amount : Minimum Bid $20.00</p>
+                            </div>
+                            <form>
+                                <div class="form-inner gap-2">
+                                    <input type="text" placeholder="$00.00">
+                                    <button class="eg-btn btn--primary btn--sm" type="submit">Place Bid</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center g-4">
+                <div class="col-lg-8">
+                    <ul class="nav nav-pills d-flex flex-row justify-content-start gap-sm-4 gap-3 mb-45 wow fadeInDown" data-wow-duration="1.5s" data-wow-delay=".2s" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active details-tab-btn" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Description</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link details-tab-btn" id="pills-bid-tab" data-bs-toggle="pill" data-bs-target="#pills-bid" type="button" role="tab" aria-controls="pills-bid" aria-selected="false">Biding History</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link details-tab-btn" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Other Auction</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".2s" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                            <div class="describe-content">
+                                <h4>How can have anything you ant in life if you ?</h4>
+                                <p class="para">If you’ve been following the crypto space, you’ve likely heard of Non-Fungible Tokens (Biddings), more popularly referred to as ‘Crypto Collectibles.’ The world of Biddings is growing rapidly. It seems there is no slowing down of these assets as they continue to go up in price. This growth comes with the opportunity for people to start new businesses to create and capture value. The market is open for players in every kind of field. Are you a collector.</p>
+                                <p class="para">But getting your own auction site up and running has always required learning complex coding langua ges, or hiring an expensive design firm for thousands of dollars and months of work.</p>
+                                <ul class="describe-list">
+                                    <li><a href="#">Amet consectetur adipisicing elit. Maxime reprehenderit quaerat, velit rem atque vel impedit! Expensive Design.</a></li>
+                                    <li><a href="#">Consectetur adipisicing elit. Maxime reprehenderit quaerat</a></li>
+                                    <li><a href="#">Fuga magni veritatis ad temporibus atque adipisci nisi rerum...</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-bid" role="tabpanel" aria-labelledby="pills-bid-tab">
+                            <div class="bid-list-area">
+                                <ul class="bid-list">
+                                    <li>
+                                        <div class="row d-flex align-items-center">
+                                            <div class="col-7">
+                                                <div class="bidder-area">
+                                                    <div class="bidder-img">
+                                                        <img alt="image" th:src="@{/ajax/auction/images/bg/bidder1.png}">
+                                                    </div>
+                                                    <div class="bidder-content">
+                                                        <a href="#"><h6>Robart FOX</h6></a>
+                                                        <p>24.50 ETH</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-5 text-end">
+                                                <div class="bid-time">
+                                                    <p>4 Hours Ago</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row d-flex align-items-center">
+                                            <div class="col-7">
+                                                <div class="bidder-area">
+                                                    <div class="bidder-img">
+                                                        <img alt="image" th:src="@{/ajax/auction/images/bg/bidder2.png}">
+                                                    </div>
+                                                    <div class="bidder-content">
+                                                        <a href="#"><h6>Jane Cooper</h6></a>
+                                                        <p>224.5 ETH</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-5 text-end">
+                                                <div class="bid-time">
+                                                    <p>5 Hours Ago</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row d-flex align-items-center">
+                                            <div class="col-7">
+                                                <div class="bidder-area">
+                                                    <div class="bidder-img">
+                                                        <img alt="image" th:src="@{/ajax/auction/images/bg/bidder3.png}">
+                                                    </div>
+                                                    <div class="bidder-content">
+                                                        <a href="#"><h6>Guy Hawkins</h6></a>
+                                                        <p>34.5 ETH</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-5 text-end">
+                                                <div class="bid-time">
+                                                    <p>6 Hours 45 minutes Ago</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row d-flex align-items-center">
+                                            <div class="col-7">
+                                                <div class="bidder-area">
+                                                    <div class="bidder-img">
+                                                        <img alt="image" th:src="@{/ajax/auction/images/bg/bidder1.png}">
+                                                    </div>
+                                                    <div class="bidder-content">
+                                                        <a href="#"><h6>Robart FOX</h6></a>
+                                                        <p>24.50 ETH</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-5 text-end">
+                                                <div class="bid-time">
+                                                    <p>4 Hours Ago</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row d-flex align-items-center">
+                                            <div class="col-7">
+                                                <div class="bidder-area">
+                                                    <div class="bidder-img">
+                                                        <img alt="image" th:src="@{/ajax/auction/images/bg/bidder2.png}">
+                                                    </div>
+                                                    <div class="bidder-content">
+                                                        <a href="#"><h6>Robart FOX</h6></a>
+                                                        <p>24.50 ETH</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-5 text-end">
+                                                <div class="bid-time">
+                                                    <p>4 Hours Ago</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                            <div class="row d-flex justify-content-center g-4">
+                                <div class="col-lg-6 col-md-4 col-sm-10">
+                                    <div class="eg-card auction-card1">
+                                        <div class="auction-img">
+                                            <img alt="image" th:src="@{/ajax/auction/images/bg/live-auc1.png}">
+                                            <div class="auction-timer">
+                                                <div class="countdown" id="timer1">
+                                                    <h4><span id="hours1">05</span>H : <span id="minutes1">52</span>M : <span id="seconds1">32</span>S</h4>
+                                                </div>
+                                            </div>
+                                            <div class="author-area">
+                                                <div class="author-emo">
+                                                    <img alt="image" th:src="@{/ajax/auction/images/icons/smile-emo.svg}">
+                                                </div>
+                                                <div class="author-name">
+                                                    <span>by @robatfox</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="auction-content">
+                                            <h4><a th:href="@{/auction/auction-details.html}">Brand New royal Enfield 250 CC For Sale</a></h4>
+                                            <p>Bidding Price : <span>$85.9</span> </p>
+                                            <div class="auction-card-bttm">
+                                                <a th:href="@{/auction/auction-details.html}" class="eg-btn btn--primary btn--sm">Place a Bid</a>
+                                                <div class="share-area">
+                                                    <ul class="social-icons d-flex">
+                                                        <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
+                                                        <li><a href="https://www.twitter.com/"><i class="bx bxl-twitter"></i></a></li>
+                                                        <li><a href="https://www.pinterest.com/"><i class="bx bxl-pinterest"></i></a></li>
+                                                        <li><a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a></li>
+                                                    </ul>
+                                                    <div>
+                                                        <a href="#" class="share-btn"><i class='bx bxs-share-alt'></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-4 col-sm-10">
+                                    <div class="eg-card auction-card1 wow fadeInDown">
+                                        <div class="auction-img">
+                                            <img alt="image" th:src="@{/ajax/auction/images/bg/live-auc2.png}">
+                                            <div class="auction-timer">
+                                                <div class="countdown" id="timer2">
+                                                    <h4><span id="hours2">05</span>H : <span id="minutes2">52</span>M : <span id="seconds2">32</span>S</h4>
+                                                </div>
+                                            </div>
+                                            <div class="author-area">
+                                                <div class="author-emo">
+                                                    <img alt="image" th:src="@{/ajax/auction/images/icons/smile-emo.svg}">
+                                                </div>
+                                                <div class="author-name">
+                                                    <span>by @robatfox</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="auction-content">
+                                            <h4><a th:href="@{/auction/auction-details.html}">Wedding Special Exclusive Cupple Ring (S2022)</a></h4>
+                                            <p>Bidding Price : <span>$85.9</span> </p>
+                                            <div class="auction-card-bttm">
+                                                <a th:href="@{/auction/auction-details.html}" class="eg-btn btn--primary btn--sm">Place a Bid</a>
+                                                <div class="share-area">
+                                                    <ul class="social-icons d-flex">
+                                                        <li><a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a></li>
+                                                        <li><a href="https://www.twitter.com/"><i class="bx bxl-twitter"></i></a></li>
+                                                        <li><a href="https://www.pinterest.com/"><i class="bx bxl-pinterest"></i></a></li>
+                                                        <li><a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a></li>
+                                                    </ul>
+                                                    <div>
+                                                        <a href="#" class="share-btn"><i class='bx bxs-share-alt'></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="blog-sidebar">
+                        <div class="sidebar-banner wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">
+                            <div class="banner-content">
+                                <span>CARS</span>
+                                <h3>Toyota AIGID A Clasis Cars Sale</h3>
+                                <a th:href="@{/auction/auction-details.html}" class="eg-btn btn--primary card--btn">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-us-counter pt-120 pb-120">
+        <div class="container">
+            <div class="row g-4 d-flex justify-content-center">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-10 col-10">
+                    <div class="counter-single text-center d-flex flex-row hover-border1  wow fadeInDown" data-wow-duration="1.5s" data-wow-delay=".2s">
+                        <div class="counter-icon"> <img alt="image" th:src="@{/ajax/auction/images/icons/employee.svg}"> </div>
+                        <div class="coundown d-flex flex-column">
+                            <h3 class="odometer" data-odometer-final="5400">&nbsp;</h3>
+                            <p>Happy Customer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-10 col-10">
+                    <div class="counter-single text-center d-flex flex-row hover-border1  wow fadeInDown" data-wow-duration="1.5s" data-wow-delay=".4s">
+                        <div class="counter-icon"> <img alt="image" th:src="@{/ajax/auction/images/icons/review.svg}"> </div>
+                        <div class="coundown d-flex flex-column">
+                            <h3 class="odometer" data-odometer-final="1250">&nbsp;</h3>
+                            <p>Good Reviews</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-10 col-10">
+                    <div class="counter-single text-center d-flex flex-row hover-border1  wow fadeInDown" data-wow-duration="1.5s" data-wow-delay=".4s">
+                        <div class="counter-icon"> <img alt="image" th:src="@{/ajax/auction/images/icons/smily.svg}"> </div>
+                        <div class="coundown d-flex flex-column">
+                            <h3 class="odometer" data-odometer-final="4250">&nbsp;</h3>
+                            <p>Winner Customer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-10 col-10">
+                    <div class="counter-single text-center d-flex flex-row hover-border1  wow fadeInDown" data-wow-duration="1.5s" data-wow-delay=".8s">
+                        <div class="counter-icon"> <img alt="image" th:src="@{/ajax/auction/images/icons/comment.svg}"> </div>
+                        <div class="coundown d-flex flex-column">
+                            <h3 class="odometer" data-odometer-final="500">&nbsp;</h3>
+                            <p>New Comments</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="row gy-5">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <a th:href="@{/auction/index.html}"><img alt="image" th:src="@{/ajax/auction/images/bg/footer-logo.png}"></a>
+                            <p>
+                                Lorem ipsum dolor sit amet consecte tur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore.
+                            </p>
+                            <form>
+                                <div class="input-with-btn d-flex jusify-content-start align-items-strech">
+                                    <input type="text" placeholder="Enter your email">
+                                    <button type="submit"><img alt="image" th:src="@{/ajax/auction/images/icons/send-icon.svg}"></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 d-flex justify-content-lg-center">
+                        <div class="footer-item">
+                            <h5>Navigation</h5>
+                            <ul class="footer-list">
+                                <li><a th:href="@{/auction/live-auction.html}">All Product</a></li>
+                                <li><a th:href="@{/auction/how-works.html}">How It Works</a></li>
+                                <li><a th:href="@{/auction/login.html}">My Account</a></li>
+                                <li><a th:href="@{/auction/about.html}">About Company</a></li>
+                                <li><a th:href="@{/auction/blog.html}">Our News Feed</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 d-flex justify-content-lg-center">
+                        <div class="footer-item">
+                            <h5>Help & FAQs</h5>
+                            <ul class="footer-list">
+                                <li><a href="">Help Center</a></li>
+                                <li><a th:href="@{/auction/faq.html}">Customer FAQs</a></li>
+                                <li><a th:href="@{/auction/login.html}">Terms and Conditions</a></li>
+                                <li><a th:href="@{/auction/about.html}">Security Information</a></li>
+                                <li><a th:href="@{/auction/blog.html}">Merchant Add Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-item">
+                            <h5>Latest Feed</h5>
+                            <ul class="recent-feed-list">
+                                <li class="single-feed">
+                                    <div class="feed-img">
+                                        <a th:href="@{/auction/blog-details.html}"><img alt="image" th:src="@{/ajax/auction/images/blog/recent-feed1.png}"></a>
+                                    </div>
+                                    <div class="feed-content">
+                                        <span>January 31, 2022</span>
+                                        <h6>
+                                            <a th:href="@{/auction/blog-details.html}">Grant Distributions Conti nu to Incr Ease.</a>
+                                        </h6>
+                                    </div>
+                                </li>
+                                <li class="single-feed">
+                                    <div class="feed-img">
+                                        <a th:href="@{/auction/blog-details.html}"><img alt="image" th:src="@{/ajax/auction/images/blog/recent-feed2.png}"></a>
+                                    </div>
+                                    <div class="feed-content">
+                                        <span>February 21, 2022</span>
+                                        <h6><a th:href="@{/auction/blog-details.html}">Seminar for Children to Learn About.</a></h6>
+                                    </div>
+                                </li>
+                                <li class="single-feed">
+                                    <div class="feed-img">
+                                        <a th:href="@{/auction/blog-details.html}"><img alt="image" th:src="@{/ajax/auction/images/blog/recent-feed3.png}"></a>
+                                    </div>
+                                    <div class="feed-content">
+                                        <span>March 22, 2022</span>
+                                        <h6>
+                                            <a th:href="@{/auction/blog-details.html}">
+                                                Education and teacher for all African
+                                                Children.
+                                            </a>
+                                        </h6>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row d-flex align-items-center g-4">
+                    <div class="col-lg-6 d-flex justify-content-lg-start justify-content-center">
+                        <p>Copyright 2022 <a href="#">Bid Out</a> | Design By <a href="http://www.bootstrapmb.com/">bootstrapmb</a></p>
+                    </div>
+                    <div class="col-lg-6 d-flex justify-content-lg-end justify-content-center align-items-center flex-sm-nowrap flex-wrap">
+                        <p class="d-sm-flex d-none">We Accepts:</p>
+                        <ul class="footer-logo-list">
+                            <li><a href="#"><img alt="image" th:src="@{/ajax/auction/images/bg/footer-pay1.png}"></a></li>
+                            <li><a href="#"><img alt="image" th:src="@{/ajax/auction/images/bg/footer-pay2.png}"></a></li>
+                            <li><a href="#"><img alt="image" th:src="@{/ajax/auction/images/bg/footer-pay3.png}"></a></li>
+                            <li><a href="#"><img alt="image" th:src="@{/ajax/auction/images/bg/footer-pay4.png}"></a></li>
+                            <li><a href="#"><img alt="image" th:src="@{/ajax/auction/images/bg/footer-pay5.png}"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script th:src="@{/ajax/auction/js/jquery-3.6.0.min.js}"></script>
+    <script th:src="@{/ajax/auction/js/jquery-ui.js}"></script>
+    <script th:src="@{/ajax/auction/js/bootstrap.bundle.min.js}"></script>
+    <script th:src="@{/ajax/auction/js/wow.min.js}"></script>
+    <script th:src="@{/ajax/auction/js/swiper-bundle.min.js}"></script>
+    <script th:src="@{/ajax/auction/js/slick.js}"></script>
+    <script th:src="@{/ajax/auction/js/jquery.nice-select.js}"></script>
+    <script th:src="@{/ajax/auction/js/odometer.min.js}"></script>
+    <script th:src="@{/ajax/auction/js/viewport.jquery.js}"></script>
+    <script th:src="@{/ajax/auction/js/jquery.magnific-popup.min.js}"></script>
+    <script th:src="@{/ajax/auction/js/main.js}"></script>
+</body>
+</html>

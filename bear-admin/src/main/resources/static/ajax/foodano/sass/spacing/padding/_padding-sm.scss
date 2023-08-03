@@ -1,0 +1,48 @@
+@media (min-width: $xs) {
+
+  /*-- Padding Left And Right --*/
+  @for $i from 1 through $sm-space-count {
+    .px-sm-#{5 * $i} {
+      padding-right: 5px *$i;
+      padding-left: 5px *$i;
+    }
+  }
+
+  /*-- Padding Top And Bottom --*/
+  @for $i from 1 through $sm-space-count {
+    .py-sm-#{5 * $i} {
+      padding-top: 5px *$i;
+      padding-bottom: 5px *$i;
+    }
+  }
+
+
+  /*-- Padding Top --*/
+  @for $i from 1 through $sm-space-count {
+    .pt-sm-#{5 * $i} {
+      padding-top: 5px *$i;
+    }
+  }
+
+  /*-- Padding Bottom --*/
+  @for $i from 1 through $sm-space-count {
+    .pb-sm-#{5 * $i} {
+      padding-bottom: 5px *$i;
+    }
+  }
+
+  /*-- Padding Left --*/
+  @for $i from 1 through $sm-space-count {
+    .pl-sm-#{5 * $i} {
+      padding-left: 5px *$i;
+    }
+  }
+
+  /*-- Padding Right --*/
+  @for $i from 1 through $sm-space-count {
+    .pr-sm-#{5 * $i} {
+      padding-right: 5px *$i;
+    }
+  }
+
+}

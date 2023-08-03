@@ -1,0 +1,43 @@
+.vs-sort-bar {
+  label {
+    margin: 0;
+    margin-right: 20px;
+  }
+
+  select {
+    display: inline-block;
+    width: fit-content;
+    padding-left: 15px;
+    padding-right: 30px;
+    min-width: 60px;
+  }
+
+  .woocommerce-result-count {
+    margin-bottom: 0;
+  }
+
+  select {
+    height: 40px;
+    border: 1px solid #ececec;
+    font-size: 14px;
+    color: $body-color;
+    font-family: $body-font;
+    font-weight: 500;
+  }
+
+  label:empty {
+    display: none;
+  }
+
+
+}
+
+
+
+@include sm {
+  .vs-sort-bar {
+    label {
+      margin-right: 10px;
+    }
+  }
+}

@@ -1,0 +1,122 @@
+:root {
+  --theme-color       : #bdd239;
+  --title-color       : #000000;
+  --body-color        : #858585;
+  --body-color2       : #959595;
+  --black-color       : #000000;
+  --light-color       : #c2c2c2;
+  --secondary-color   : #f5f6fb;
+  --smoke-color       : #f8f8f8;
+  --dark-color        : #252323;
+  --light-dark-color  : #0f1116;
+  --white-color       : #ffffff;
+  --yellow-color      : #fec624;
+  --success-color     : #28a745;
+  --error-color       : #dc3545;
+  --border-color      : rgba(0,0,0,0.10);
+  --theme-font        : 'Advent Pro', sans-serif;
+  --theme-font2       : 'Lato',sans-serif;
+  --theme-font3       : 'Amatic SC', cursive;
+  --icon-font         : 'Font Awesome 5 Pro';
+  --moving-ani-duration: 10s;
+  --ripple-ani-duration: 5s;
+}
+
+// Color Variation
+$theme-color          : var(--theme-color);
+$title-color          : var(--title-color);
+$body-color           : var(--body-color);
+$body-color2          : var(--body-color2);
+$black-color          : var(--black-color);
+$light-color          : var(--light-color);
+$smoke-color          : var(--smoke-color);
+$secondary-color      : var(--secondary-color);
+$white-color          : var(--white-color);
+$dark-color           : var(--dark-color);
+$yellow-color         : var(--yellow-color);
+$success-color        : var(--success-color);
+$error-color          : var(--error-color);
+$border-color         : var(--border-color);
+
+// Font Variation
+$theme-font  : var(--theme-font);
+$theme-font2 : var(--theme-font2);
+$theme-font3 : var(--theme-font3);
+$icon-font   : var(--icon-font);
+
+// Typography
+$title-font      : $theme-font;
+$body-font       : $theme-font2;
+$body-font-size  : 16px;
+$body-line-Height: 26px;
+$body-font-weight: 400;
+$p-line-Height   : 1.8;
+
+// Device Variation
+$hd: 1920px;
+$xl: 1500px;
+$ml: 1300px;
+$lg: 1199px;
+$md: 992px;
+$sm: 767px;
+$xs: 576px;
+
+$space-count: 20; // Spacing Count with 5x
+$space : 130px; // Section Space  For large Device
+$space-medium: 100px;
+$space-md : 60px; // Section Space On small Device
+$space-medium-md: 30px;
+
+// BG Color Mapping 
+$bgcolorMap  : ();
+$bgcolorMap  : map-merge((
+  "theme"    : $theme-color,
+  "black"    : $black-color,
+  "smoke"    : $smoke-color,
+  "secondary": $secondary-color,
+  "white"    : $white-color,
+  "dark"     : $dark-color,
+  "yellow"   : $yellow-color,
+  "success"  : $success-color,
+  "error"    : $error-color,
+  "body"     : $body-color
+), $bgcolorMap);
+
+// Overlay Color Mapping 
+$overlaycolorMap : ();
+$overlaycolorMap : map-merge((
+  "theme"        : $theme-color,
+  "white"        : $white-color,
+  "dark"         : $dark-color,
+), $overlaycolorMap);
+
+// Text Color Mapping 
+$textColorsMap : ();
+$textColorsMap : map-merge((
+  "theme"      : $theme-color,
+  "title"      : $title-color,
+  "body"       : $body-color,
+  "body2"      : $body-color2,
+  "light"      : $light-color,
+  "white"      : $white-color,
+  "yellow"     : $yellow-color,
+  "success"    : $success-color,
+  "error"      : $error-color), 
+$textColorsMap);
+
+// Font Mapping 
+$fontsMap : ();
+$fontsMap : map-merge((
+  "theme" : $theme-font,
+  "theme2": $theme-font2,
+  "icon"  : $icon-font
+), $fontsMap);
+
+
+.home-7,
+.home-8,
+.home-6 {
+  &:not(.plate-color) {    
+    --theme-color : rgba(118, 167, 19, 1);
+  }
+}

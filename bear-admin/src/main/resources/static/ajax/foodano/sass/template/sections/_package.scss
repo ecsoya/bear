@@ -1,0 +1,130 @@
+.package-style1 {
+  text-align: center;
+  border: 1px solid #f7d15b;
+  margin: 0 0 60px 0;
+  background-color: $white-color;
+
+  .package-img {
+    margin: -1px -1px 0 -1px;
+    
+    img {
+      width: 100%;
+    }
+  }
+
+  .package-quantity {
+    width: 230px;
+    height: 230px;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 0 5px 0;
+    margin: -140px auto 27px auto;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .number {
+    font-size: 80px;
+    font-family: $theme-font3;
+    color: #111111;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0 0 3px 0;
+  }
+
+  .label {
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #111111;
+    font-family: $theme-font3;
+  }
+
+  .package-price {
+    font-size: 30px;
+    font-weight: 700;
+    color: $theme-color;
+    margin: 0 0 8px 0;
+    
+    .text {
+      color: #111111;
+      font-weight: 500;
+      font-size: 16px;
+      display: inline-block;
+      margin: 0 0 0 5px;
+    }
+  }
+  
+  
+  .package-title {
+    font-size: 26px;
+    line-height: 36px;
+    max-width: 270px;
+    margin: 0 auto;
+  }
+
+  .package-list {
+    ul {
+      font-size: 16px;
+      margin: 24px auto 43px auto;
+      max-width: 275px;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    li:not(:last-child) {
+      border-bottom: 1px dashed green;
+      padding: 0 0 12px 0;
+      margin: 0 0 11px 0;
+    }
+
+    i {
+      color: #fdd835;
+      margin-right: 10px;
+    }
+  }
+
+  .vs-btn {
+    width: calc(100% - 30px);
+    display: block;
+    margin: 0 auto -30px auto;
+  }
+}
+
+
+
+@include lg {
+  .package-style1 {
+    .package-list {
+      ul {
+        max-width: 230px;
+      }
+    }
+
+    .package-title {
+      font-size: 22px;
+      line-height: 32px;
+      max-width: 230px;
+    }
+
+    .package-price {
+      font-size: 24px;
+    }
+
+    .package-quantity {
+      width: 180px;
+      height: 180px;
+      margin: -90px auto 27px auto;
+    }
+
+    .label {
+      font-size: 20px;
+    }
+
+    .number {
+      font-size: 72px;
+    }
+  }
+}

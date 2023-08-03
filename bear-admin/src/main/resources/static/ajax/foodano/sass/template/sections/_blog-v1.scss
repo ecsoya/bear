@@ -1,0 +1,394 @@
+@media (max-width: 1790px) {
+  .vs-blog-wrapper {
+    .shape1 {
+      display: none !important;
+    }
+  }
+}
+
+.blog-grid {
+
+  .blog-title {
+    margin-bottom: 8px;
+  }
+
+  .blog-content {
+    background-color: #f5fcf9;
+    padding: 28px 30px;
+  }
+
+  .blog-meta {
+    a {
+      color: $body-color2;
+      position: relative;
+      font-size: 14px;
+
+      &:hover {
+        color: $theme-color;
+      }
+
+      &:after {
+        content: '';
+        width: 7px;
+        display: inline-block;
+        height: 1px;
+        background-color: $theme-color;
+        vertical-align: middle;
+        margin-left: 5px;
+        margin-right: 7px;
+      }
+
+      &:last-child {
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    &.fs-12 {
+      a {
+        font-size: 12px;
+      }
+    }
+  }
+
+
+  &.grid-wide {
+    .blog-content {
+      padding: 30px 40px 35px 40px;
+    }
+  }
+
+  
+}
+
+
+.blog-style1 {
+  position: relative;
+
+  &:before {
+    content: '';  
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    bottom: 0;
+    left: 5px;
+    border: 2px solid $theme-color;
+    z-index: 1;
+  }
+
+  .tags {
+    display: inline-block;
+    margin: 0 8px 0 0;
+
+    a {
+      background-color: $theme-color;
+      color: $white-color;
+      display: inline-block;
+      text-transform: uppercase;
+      font-weight: 700;
+      line-height: 1;
+      font-size: 14px;
+      padding: 7px 15px;
+      border-radius: 4px;
+      margin: 0 5px 5px 0;
+
+      &:hover {
+        background-color: $title-color;
+        color: $white-color;
+      }
+    }
+  }
+
+  .blog-date {
+    font-weight: 700;
+    line-height: 1;
+    font-size: 14px;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #444444;
+
+    &:hover {
+      color: $theme-color;
+    }
+  }
+
+  .blog-title {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 31px;
+    margin: 5px 0 15px 0;
+  }
+
+  .meta-box {
+    border-top: 2px solid $theme-color;
+    padding: 16px 25px;
+    margin: 26px 5px 0 5px;
+    position: relative;
+    z-index: 3;
+    
+    a {
+      position: relative;
+      font-size: 20px;
+      font-weight: 700;
+      font-family: $theme-font3;
+      color: #444444;
+
+      &:not(:last-child):after {
+        content: '/';
+        margin: 0 12px 0 12px;
+      }
+
+      &:hover {
+        color: $theme-color;
+      }
+    }
+  }
+
+  .blog-content {
+    padding: 25px 30px 0 30px;
+    position: relative;
+    z-index: 3;
+  }
+
+
+}
+
+.blog-style2 {
+  margin-bottom: 22px;
+  
+  .blog-img {
+    margin: 0 0 18px 0;
+  }
+
+  .blog-avater {
+    width: 70px;
+    height: 70px;
+    border: 5px solid $white-color;
+    position: absolute;
+    right: 22px;
+    top: -50px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  
+  .blog-date {
+    color: $theme-color;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    display: inline-block;
+    margin: 0 0 4px 0;
+  }
+  
+  .blog-meta {
+    margin-bottom: 10px;
+    
+    a {
+      position: relative;
+      font-size: 20px;
+      font-weight: 700;
+      font-family: $theme-font3;
+      color: #444444;
+
+      &:not(:last-child):after {
+        content: '/';
+        margin: 0 12px 0 12px;
+      }
+
+      &:hover {
+        color: $theme-color;
+      }
+    }
+  }
+
+  .blog-title {
+    font-size: 26px;
+    max-width: 350px;
+    margin: 0 0 0 0;
+  }
+
+  .blog-content {
+    position: relative;
+  }
+}
+
+.blog-style3 {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  position: relative;
+  border-bottom: 1px solid #fdc500;
+  margin: 0 0 30px 0;
+  padding: 0 0 30px 0;
+
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .blog-img {
+    position: relative;
+  }
+  
+  .blog-shape {
+    position: absolute;
+    left: -20%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .blog-content {
+    flex: 1;
+  }
+
+  .blog-title {
+    font-size: 32px;
+    line-height: 42px;
+    margin: 0 0 7px 0;
+    max-width: 420px;
+  }
+
+  .blog-text {
+    font-size: 18px;
+    line-height: 32px;
+    margin: 0 0 33px 0;
+    max-width: 420px;
+  }
+
+  .blog-bottom {
+    display: flex;
+    align-items: center;
+  }
+
+  .blog-date {
+    color: $theme-color;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    display: inline-block;
+    margin: 0 0 2px 0;
+  }
+
+  .blog-meta {
+    a {
+      position: relative;
+      font-size: 20px;
+      font-weight: 700;
+      font-family: $theme-font3;
+      color: #444444;
+
+      &:not(:last-child):after {
+        content: '/';
+        margin: 0 12px 0 12px;
+      }
+
+      &:hover {
+        color: $theme-color;
+      }
+    }
+  }
+
+  .blog-avater {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    margin: 0 10px 0 0;
+    border-radius: 50%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+}
+
+
+
+@media (min-width: $lg) and (max-width: $xl) {
+  .related-post-wrapper {
+    .blog-grid {
+      .blog-content {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+  }
+
+}
+
+
+@include lg {
+  .blog-single {
+    .blog-author {
+      padding: 25px 25px;
+    }
+  }
+
+  .blog-style3 {
+    .blog-img {
+      max-width: 450px;
+    }
+
+    .blog-shape {
+      max-width: 200px;
+      left: -5%;
+    }
+
+    .blog-title {
+      font-size: 28px;
+      line-height: 30px;
+      margin: 0 0 10px 0;
+    }
+
+    .blog-text {
+      font-size: 16px;
+      line-height: 28px;
+      margin: 0 0 23px 0;
+      max-width: 420px;
+    }
+  }
+}
+
+@include md {
+  .blog-style3 {
+    display: block;
+
+    .blog-text,
+    .blog-title,
+    .blog-img {
+      max-width: 100%;
+    }
+
+    .blog-img {
+      margin-bottom: 20px;
+    }
+
+    .blog-shape {
+      left: 0;
+    }
+  }
+}
+
+
+@include sm {
+  .blog-grid {
+    &.grid-wide {
+      .blog-content {
+        padding: 20px 20px 20px 20px;
+      }
+    }
+  }
+
+  .blog-style3 {
+
+    .blog-shape {
+      max-width: 100px;
+    }
+
+    .blog-title {
+      font-size: 26px;
+      line-height: 36px;
+    }
+  }
+}

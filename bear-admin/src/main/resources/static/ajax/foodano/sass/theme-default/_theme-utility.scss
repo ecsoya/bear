@@ -1,0 +1,199 @@
+@media (min-width: 1950px) {
+  .d-none-hd {
+    display: none;
+  }
+}
+
+
+@media (min-width: $xl) {
+  .d-hd-inline-block {
+    display: inline-block !important;
+  }
+
+  .d-hd-block {
+    display: block !important;
+  }
+}
+
+.bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow:before,
+.bs-tooltip-start .tooltip-arrow:before {
+  border-right-color: $theme-color;
+}
+
+
+.shape-mockup-wrap {
+  position: relative;
+}
+
+.shape-mockup {
+  position: absolute;
+  z-index: -1;
+}
+
+.image-scale-hover {
+  overflow: hidden;
+
+  img {
+    transition: all ease 0.4s;
+    transform: scale(1.001);
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.2);
+    }
+  }
+}
+
+
+.link-inherit {
+  & a,
+  * a {
+    color: inherit;
+
+    &:hover {
+      color: $theme-color;
+    }
+  }
+}
+
+
+.list-style-none {
+  ol,
+  ul,
+  & {
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    list-style-type: none;
+  }
+}
+
+
+
+.form-messages {
+  display: none;
+
+  &.success {
+    color: $success-color;
+    display: block;
+  }
+  &.error {
+    color: $error-color;
+    display: block;
+  }
+}
+
+
+.z-index-step1 {
+  position: relative;
+  z-index: 41 !important;
+}
+
+.z-index-common {
+  position: relative;
+  z-index: 31;
+}
+
+
+.badge {
+  position: absolute;
+  width: fit-content;
+  display: inline-block;
+  text-align: center;
+  background-color: $body-color;
+  color: $white-color;
+  padding: .35em .55em;
+  border-radius: 50%;
+}
+
+.vs-rating {
+  color: $light-color;
+
+  .active {
+    color: $theme-color;
+  }
+}
+
+.media-body {
+  flex: 1;
+}
+
+.middle-box {
+  margin-bottom: -82px;
+  position: relative;
+  z-index: 1;
+  border-radius: 10px;
+
+  h4 {
+    max-width: 240px;
+  }
+}
+
+#google_translate_element2,
+.goog-te-banner-frame,
+#goog-gt-tt {
+  display: none !important;
+}
+
+
+.goog-te-menu-value:hover {
+  text-decoration: none !important;
+}
+
+.goog-text-highlight {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+.bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow:before,
+.bs-tooltip-start .tooltip-arrow:before {
+  border-left-color: $theme-color;
+}
+
+.bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow:before,
+.bs-tooltip-top .tooltip-arrow:before {
+  border-top-color: $theme-color;
+}
+
+.tooltip-inner {
+  background-color: $theme-color;
+}
+
+.new-label {
+  background-color: #dc3545;
+  display: inline-block;
+  color: $white-color;
+  font-size: 11px;
+  font-family: $body-font;
+  font-weight: 400;
+  line-height: 1;
+  padding: 3px 7px;
+  border-radius: 5px;
+}
+
+@include md {
+  .middle-box {
+    margin-bottom: 60px;
+  }
+}
+
+@include xs {
+  .middle-box {
+    &.px-90.py-50 {
+      padding: 20px;
+    }
+
+    .media-icon {
+      &.pr-35 {
+        padding-right: 15px;
+      }
+    }
+  }
+}

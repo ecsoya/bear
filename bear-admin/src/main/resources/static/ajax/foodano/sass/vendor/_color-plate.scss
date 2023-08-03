@@ -1,0 +1,111 @@
+/* Color Plate */
+.vs-setting-plate {
+  position: fixed;
+  display: block;
+  z-index: 99998;
+  padding: 20px;
+  width: 240px;
+  background: #fff;
+  left: -240px;
+  text-align: left;
+  top: 30%;
+  transition: all 0.4s ease;
+  box-shadow: -3px 0px 10px -2px rgba(0, 0, 0, 0.10);
+  direction: ltr;
+
+
+  &.open {
+    left: 0;
+  }
+  
+
+  .setting-plate-icon {
+    position: absolute;
+    right: -48px;
+    width: 48px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 21px;
+    border-radius: 0 5px 5px 0;
+    text-align: center;
+    color: #fff !important;
+    top: 0;
+    cursor: pointer;
+    box-shadow: -4px 0px 5px #00000036;
+  }
+
+  .plate-btn {
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    border: none;
+    background-color: #000;
+    color: $white-color;
+    font-weight: 700;
+    font-size: 14px;
+    border: 1px solid transparent;
+    text-align: center;
+    
+    &:hover,
+    &.active {
+      border-color: $theme-color;
+      background-color: transparent;
+      color: $title-color;
+    }
+  }
+
+  h4 {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 0px;
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 12px;
+    margin-bottom: 15px;
+    line-height: 20px;
+  }
+  
+  .btn-wrap {
+    display: grid;
+    gap: 5px;
+
+    &.grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    &.grid-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .color-btn {
+    // width: calc(30.33% - 5px);
+    height: 40px;
+    border-radius: 0;
+    cursor: pointer;
+    display: inline-block;
+    border: none;
+  }
+
+  .color-btn:hover {
+    cursor: pointer;
+  }
+  
+}
+
+
+
+.default-color-btn {
+  border: none;
+  background-color: #000;
+  color: $white-color;
+  font-weight: 400;
+  font-family: $body-font;
+  text-align: center;
+  width: 100%;
+  font-size: 14px;
+  margin: 0 0 10px 0;
+  padding: 5px 0;
+}
+

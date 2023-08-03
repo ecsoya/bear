@@ -1,0 +1,49 @@
+.vs-comment-form {
+  input {
+    height: 70px;
+    padding-left: 30px;
+  }
+
+  textarea {
+    padding-left: 30px;
+    padding-top: 25px;
+  }
+
+  .custom-checkbox {
+    margin-bottom: 25px;
+  }
+  
+  p.comment-notes {
+    margin-bottom: 22px;
+  }
+  
+  .form-title .h4 {
+    margin-bottom: 6px !important;
+  }
+}
+
+
+@include md {
+  .vs-comment-form {
+    &.mt-60 {
+      margin-top: 0;
+    }
+
+    &.mb-30 {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+
+@include md {
+  .vs-comment-form textarea {
+    padding-left: 15px;
+    padding-top: 10px;
+  }
+
+  .vs-comment-form input {
+    height: 50px;
+    padding-left: 15px;
+  }
+}

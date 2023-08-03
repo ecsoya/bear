@@ -1,0 +1,258 @@
+.vs-feature-box1 {
+  position: relative;
+  margin-bottom: 30px;
+  max-width: 280px;
+
+  .feature-icon {
+    display: inline-block;
+    @include equal-size(134px);
+    line-height: 134px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0px 11px 57.82px 1.18px rgba(209, 193, 193, 0.54);
+    border-radius: 50%;
+    margin-bottom: 35px;
+
+    &:after,
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-radius: inherit;
+      z-index: -1;
+      transition: all ease 0.4s;
+    }
+
+    &:before {
+      background-color: $body-color;
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(0);
+    }
+
+    &:after {
+      border: 2px dotted #e2d6d6;
+      top: 15px;
+      right: 15px;
+      bottom: 15px;
+      left: 15px;
+    }
+
+    .badge {
+      @include equal-size(41px);
+      line-height: 41px;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: $title-font;
+      padding: 0;
+      background-color: $theme-color;
+      left: 0;
+      top: 0;
+      box-shadow: 0px 11px 57.82px 1.18px rgba(209, 193, 193, 0.54);
+      transition: all ease 0.6s;
+    }
+
+    i {
+      font-size: 3rem;
+      line-height: inherit;
+    }
+  }
+
+
+  .feature-shape {
+    position: absolute;
+    top: 60px;
+    right: -30%;
+  }
+
+  // &:nth-child(even) {
+  //   .feature-shape {
+  //     transform: rotateX(180deg);
+  //   }
+  // }
+
+  // &:last-child {
+  //   .feature-shape {
+  //     display: none;
+  //   }
+  // }
+
+  &:hover {
+
+    .feature-icon {
+      color: $white-color;
+
+      .badge {
+        background-color: $white-color;
+        color: $title-color;
+      }
+
+      &:before {
+        transform: scale(1);
+        opacity: 1;
+        visibility: visible;
+      }
+
+      &:after {
+        border-color: $white-color;
+      }
+    }
+  }
+}
+
+.featured-bar {
+  box-shadow: 0px 22px 32px 0px rgba(0, 0, 0, 0.04);
+  border-radius: 10px;
+  background-color: $white-color;
+  padding: 45px 70px 15px 70px;
+  margin-top: -82.5px;
+  z-index: 41;
+  position: relative;
+}
+
+.feature-style1 {
+  position: relative;
+  border: 1px solid #f7d15b;
+  margin: 20px 0 30px 25px;
+  padding: 22px 0 20px 55px;
+
+  .feature-title {
+    font-size: 22px;
+    margin: 0;
+  }
+
+  .feature-text {
+    margin: 0;
+
+  }
+
+  .feature-icon {
+    position: absolute;
+    left: -25px;
+    top: -20px;
+  }
+
+}
+
+.feature-style2 {
+  text-align: center;
+  border-right: 1px dashed #d0d0d0;
+  margin-bottom: 25px;
+
+  &:last-child {
+    border-right: none;
+  }
+
+  .feature-img {
+    margin-bottom: 23px;
+  }
+
+  .feature-title {
+    font-size: 26px;
+    margin: 0 0 10px 0;
+  }
+
+  .feature-text {
+    font-size: 18px;
+    margin: 0 auto;
+    line-height: 30px;
+    max-width: 300px;
+  }
+
+}
+
+@include lg {
+  .vs-feature-box1 {
+    margin-left: auto;
+    margin-right: auto;
+
+    .feature-shape {
+      right: -9%;
+    }
+  }
+
+  .featured-bar {
+    box-shadow: 0px 0 52px 0px rgba(0, 0, 0, 0.07);
+    padding: 45px 40px 15px 40px;
+    margin-top: 130px;
+  }
+
+  .feature-icon.mr-30 {
+    margin-right: 20px;
+  }
+
+  .feature-style1 {
+    padding: 0 20px 20px 20px;
+    margin: 35px 0 30px 0;
+    text-align: center;
+
+    .feature-icon {
+      position: relative;
+      left: 0;
+      top: 0;
+      margin-top: -35px;
+      margin-bottom: 10px;
+    }
+  }
+
+}
+
+
+@include md {
+  .vs-feature-box1 {
+    text-align: center;
+
+    .feature-shape {
+      display: none;
+    }
+  }
+
+  .featured-bar {
+    padding: 35px 20px 0.5px 20px;
+    margin-top: 60px;
+  }
+
+  .feature-bar-box {
+    &.d-lg-flex {
+      text-align: center;
+
+      .feature-icon {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .feature-style2 {
+    border-right: none;
+    
+    .feature-img {
+      max-width: 150px;
+      margin: 0 auto 15px auto;
+    }
+
+    .feature-title {
+      font-size: 24px;
+    }
+
+    .feature-text {
+      font-size: 16px;
+      margin: 0 auto;
+      line-height: 26px;
+      max-width: 205px;
+    }
+  }
+}
+
+@include xs {
+  .feature-style2 {
+    border-right: none;
+
+    .feature-text {
+      max-width: 100%;
+    }
+  }
+}

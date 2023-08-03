@@ -1,0 +1,166 @@
+.section-title {
+  margin-bottom: 60px;
+
+  >img {
+    margin-top: 15px;
+  }
+}
+
+
+// Section Title
+.sec-title2,
+.sec-title1 {
+  font-size: 72px;
+  text-transform: capitalize;
+  line-height: 1;
+  margin-top: -0.14em;
+  margin-bottom: 20px;
+}
+
+.sec-title2 {
+  color: $theme-color;
+  font-weight: 200;
+  margin-bottom: 0;
+  text-transform: none;
+}
+
+.sec-title3 {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.sec-title4 {
+  font-size: 50px;
+}
+
+
+// Sub Section Title
+.sub-title2,
+.sub-title1 {
+  font-family: $title-font;
+  letter-spacing: 0.5em;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 18px;
+  color: $body-color2;
+  text-transform: uppercase;
+  display: block;
+}
+
+.sub-title2 {
+  letter-spacing: 0.3em;
+  text-transform: capitalize;
+  margin-bottom: 15px;
+}
+
+.sub-title3 {
+  font-family: $title-font;
+  font-size: 18px;
+  letter-spacing: 0.4em;
+  font-weight: 300;
+  text-transform: capitalize;
+  color: #010101;
+}
+
+.sub-title4 {
+  font-size: 35px;
+  font-family: $theme-font3;
+  font-weight: 700;
+  color: $theme-color;
+  margin: 0 0 10px 0;
+  display: block;
+}
+
+.sec-text {
+  font-size: 18px;
+}
+
+.sec-icon {
+  margin: 0 0 30px 0;
+}
+
+
+.inner-title1 {
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+  margin-top: -0.3em;
+
+  span {
+    font-weight: 300;
+  }
+  
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: $theme-color;
+  }
+}
+
+
+
+@include lg {
+  .sec-title1,
+  .sec-title2 {
+    font-size: 54px;
+  }
+
+  .sec-title3 {
+    font-size: 46px;
+  }
+
+  .sub-title4 {
+    font-size: 30px;
+  }
+
+  .sec-title4 {
+    font-size: 42px;
+    line-height: 1.2;
+  }
+}
+
+
+@include md {
+  .sec-title1,
+  .sec-title2 {
+    font-size: 48px;
+  }
+
+  .sec-title4,
+  .sec-title3 {
+    font-size: 36px;
+  }
+
+  .sub-title4 {
+    font-size: 24px;
+  }
+
+  .section-title {
+    margin-bottom: 40px;
+  }
+
+  .sec-text {
+    font-size: 16px;
+  }
+}
+
+@include sm {
+  .sec-title1,
+  .sec-title2 {
+    font-size: 36px;
+  }
+
+  .sec-title4,
+  .sec-title3 {
+    font-size: 30px;
+  }
+
+  .sub-title2 {
+    font-size: 18px;
+  }
+}

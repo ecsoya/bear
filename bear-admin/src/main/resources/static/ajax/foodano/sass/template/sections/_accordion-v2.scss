@@ -1,0 +1,38 @@
+.faq-list {
+  li {
+    position: relative;
+    padding-left: 25px;
+
+    &::before {
+      content: '\f101';
+      font-family: $icon-font;
+      position: absolute;
+      left: 0;
+    }
+  }
+}
+
+.accordion-item {
+  background-color: transparent;
+  border: none;
+}
+
+
+.accordion-style2 {
+  .accordion-header {
+    border-bottom: 1px solid #f3e8e8;
+  }
+  
+  .accordion-body {
+    padding: 0;
+    padding-top: 20px;
+  }
+
+  .accordion-item {
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 25px;
+    }
+  }
+}

@@ -1,0 +1,70 @@
+
+.widget_rss {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    .rsswidget {
+      color: var(--title-color);
+      font-family: var(--theme-font);
+      font-size: 18px;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .rssSummary {
+      font-size: 14px;
+    }
+
+
+    a {
+      display: block;
+      font-weight: 700;
+      color: inherit;
+    }
+
+    .rss-date {
+      font-size: 14px;
+      display: inline-block;
+      margin-bottom: 5px;
+
+      &:before {
+        content: '\f073';
+        font-family: $icon-font;
+        margin-right: 10px;
+        font-weight: 300;
+        color: $theme-color;
+      }
+    }
+
+    cite {
+      font-weight: 600;
+      color: $title-color;
+      font-family: $title-font;
+      
+      &:before {
+        content: '';
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 2px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 8px;
+        background-color: $theme-color;
+      }
+    }
+
+
+  }
+
+  li:not(:last-child) {
+    margin-bottom: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+    padding-bottom: 16px;
+  }
+
+
+}

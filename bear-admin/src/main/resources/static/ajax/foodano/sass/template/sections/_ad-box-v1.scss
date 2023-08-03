@@ -1,0 +1,153 @@
+.vs-vsadbox-box1{
+  position: relative;
+
+  .vsadbox-content {
+    position: absolute;
+    left: 11%;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-bottom: 12px;
+  }  
+}
+
+.vs-vsadbox-box3,
+.vs-vsadbox-box1 {
+  .vsadbox-btn {
+    color: $body-color;
+    font-weight: 700;
+    font-size: 18px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 1px;
+      width: 100%;
+      background-color: $body-color;
+      transition: inherit;
+    }
+
+    &:hover {
+      color: $theme-color;
+
+      &:before {
+        background-color: $theme-color;
+      }
+    }
+  }
+}
+
+.vs-vsadbox-box5,
+.vs-vsadbox-box4,
+.vs-vsadbox-box3 {
+  position: relative;
+
+  .vsadbox-content {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 40px;
+    z-index: 1;
+
+    * {
+      z-index: 2;
+    }
+  }  
+}
+
+.vs-vsadbox-box3 {
+  .vsadbox-content {
+    top: 55%;
+  }
+}
+
+.vs-vsadbox-box4 {
+  .vsadbox-content {
+    top: 40%;
+    max-width: 280px;
+  }
+}
+
+.vs-vsadbox-box4 {
+  .vsadbox-content {
+    top: 40%;
+  }
+}
+
+
+.vs-vsadbox-box6 {
+  .vsadbox-content {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    z-index: 1;
+    transform: translateY(-50%);
+  }
+}
+
+
+
+
+@include ml {
+  .vs-vsadbox-box1 {
+    .vsadbox-content {
+      left: 5%;
+      
+      h1 {
+        font-size: 28px;
+      }
+      .vsadbox-btn {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@include lg {
+  .vs-vsadbox-box5 .vsadbox-content,
+  .vs-vsadbox-box4 .vsadbox-content,
+  .vs-vsadbox-box3 .vsadbox-content {
+    transform: translateY(-69%);
+    padding: 0 80px 0 15px;
+  }
+
+  .vs-vsadbox-box6{
+    .vsadbox-content {
+      right: 30px;
+    }
+
+    .h1 {
+      font-size: 30px;
+    }
+
+    h4 {
+      font-size: 18px;
+    }
+  }
+}
+
+
+@include xs {
+  .vs-vsadbox-box1 {
+    .vsadbox-content {
+      
+      h1 {
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  .vs-vsadbox-box6 {
+    .vsadbox-content {
+      transform: scale(0.7) translateY(-50%);
+      right: 3%;
+      transform-origin: 100% 0;
+    }
+  }
+}

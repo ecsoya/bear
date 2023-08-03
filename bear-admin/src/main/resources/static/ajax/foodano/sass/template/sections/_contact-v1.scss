@@ -1,0 +1,12 @@
+.contact-form1 {
+  .form-control {
+    font-family: $title-font;
+    height: 70px;
+    border-color: #eeeeee;
+    color: $title-color;
+
+    @include inputPlaceholder {
+      color: $body-color2;
+    }
+  }
+}

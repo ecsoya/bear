@@ -1,0 +1,28 @@
+.award-box {
+  text-align: center;
+  border: 2px solid #fcd96d;
+  padding: 45px 45px 42px 45px;
+  
+  &__icon {
+    margin: 0 0 23px 0;
+  }
+
+  &__text {
+    margin: 0;
+  }
+}
+
+
+@include lg {
+  .award-box {
+    padding: 35px 20px 32px 20px;
+
+    &__icon {
+      margin: 0 0 13px 0;
+    }
+
+    &__text {
+      line-height: 1.5;
+    }
+  }
+}
